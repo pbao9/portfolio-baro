@@ -1,7 +1,12 @@
+import {Helmet} from "react-helmet-async";
+
 export const Tools = () => {
     return (
-        <div>
+        <>
+            <Helmet>
+                <title>Baro | Tools</title>
+            </Helmet>
             Công cụ sử dụng
-        </div>
+        </>
     )
 }

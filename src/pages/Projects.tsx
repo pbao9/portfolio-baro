@@ -1,6 +1,12 @@
+import {Helmet} from "react-helmet-async";
+
 const Projects = () => {
     return (
-        <div>Dự án </div>
+        <div>
+            <Helmet>
+                <title>Baro | Projects</title>
+            </Helmet>
+        </div>
     )
 }
 

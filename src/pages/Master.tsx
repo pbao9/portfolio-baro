@@ -2,6 +2,7 @@ import Footer from '../components/partials/Footer'
 import Header from '../components/partials/Header'
 import {Outlet} from 'react-router'
 import CardPortfolio from "../components/CardPortfolio.tsx";
+import {Question} from "../components/Question.tsx";
 
 const Master = () => {
     return (
@@ -14,8 +15,11 @@ const Master = () => {
                         <CardPortfolio />
                     </div>
 
-                    <div className="w-3/4 bg-gray-900 p-6 rounded-lg shadow-lg">
+                    <div className="w-3/4 p-3 rounded-lg shadow-lg">
                         <Outlet />
+
+
+                        <Question/>
                     </div>
                 </div>
 

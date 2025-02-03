@@ -1,67 +1,10 @@
+import {Helmet} from "react-helmet-async";
+
 const Home = () => {
     return <div >
-        Trang chủ
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
-        <p>Đây là nội dung trang cchur</p>
+        <Helmet>
+            <title>Baro | Home</title>
+        </Helmet>
     </div>
 
 }

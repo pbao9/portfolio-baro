@@ -1,6 +1,6 @@
 @import 'tailwindcss';
-
-
+@plugin "daisyui";
+@import "tailwindcss-animated";
 @theme{
     --font-inter: 'Inter', sans-serif;
     --color-green-custom:  rgb(48, 194, 61);
