@@ -4,7 +4,7 @@ import { MdOutlineAlternateEmail } from "react-icons/md";
 
 const CardPortfolio = () => {
     return (
-        <div className="shadow-lg p-6 w-80 text-center block bg-dark-custom rounded-3xl">
+        <div className="shadow-lg p-6 w-80 text-center block bg-dark-custom rounded-3xl mx-auto">
             <img
                 src="/avatar.jpg"
                 alt="Profile"

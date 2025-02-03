@@ -3,7 +3,7 @@ import {FiBriefcase, FiFolder, FiHome, FiMail, FiTool} from "react-icons/fi";
 
 const Header = () => {
     return (
-        <nav className="w-[20rem] bg-dark-custom font-primary flex justify-around p-2 mt-5 rounded-lg">
+        <nav className="w-[20rem] bg-dark-custom font-primary flex justify-around p-2 mt-5 rounded-lg sticky top-10 z-[999] shadow-2xs">
             <Link
                 to={'/'}
                 className="group p-2 rounded-lg transition-all duration-300 relative"
