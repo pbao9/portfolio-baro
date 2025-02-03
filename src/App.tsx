@@ -1,11 +1,16 @@
+import { Route, Routes } from 'react-router'
 import './App.css'
+import Home from './pages/Home'
+import Master from './pages/Master'
 
 function App() {
     return (
         <>
-            <div className="flex justify-center bg-black text-white">
-                <h1>Hello world</h1>
-            </div>
+            <Routes>
+                <Route path="/" element={<Master />}>
+                    <Route index element={<Home />} />
+                </Route>
+            </Routes>
         </>
     )
 }
