@@ -12,7 +12,7 @@ const Master = () => {
                 <Header />
 
                 <div className="relative flex flex-wrap lg:flex-nowrap justify-center gap-16 md:gap-16 w-full px-4 md:px-10 py-10">
-                    <div className="w-full md:w-1/2 lg:w-1/4 top-10 relative lg:sticky self-start">
+                    <div className="w-full md:w-1/2 lg:w-1/4 top-10 relative lg:sticky self-start animate-fade-right">
                         <CardPortfolio />
                     </div>
 
