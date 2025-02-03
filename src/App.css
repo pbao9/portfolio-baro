@@ -1,1 +1,9 @@
 @import 'tailwindcss';
+
+
+@theme{
+    --font-inter: 'Inter', sans-serif;
+    --color-green-custom:  rgb(48, 194, 61);
+    --color-dark-custom: rgba(39, 40, 41, 0.5);
+    --color-pink-dark: rgb(252, 43, 137)
+}
