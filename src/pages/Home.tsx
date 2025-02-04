@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 import Hero from '../components/Hero'
+import TechStack from "../components/TechStack.tsx";
 const Home = () => {
     return (
         <div>
@@ -7,6 +8,7 @@ const Home = () => {
                 <title>Baro</title>
             </Helmet>
             <Hero />
+            <TechStack/>
         </div>
     )
 }

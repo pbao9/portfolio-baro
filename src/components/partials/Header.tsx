@@ -1,8 +1,8 @@
-import { Link, useLocation } from 'react-router' // ✅ Sửa lỗi import
+import { Link, useLocation } from 'react-router'
 import { FiBriefcase, FiFolder, FiHome, FiMail, FiTool } from 'react-icons/fi'
 
 const Header = () => {
-    const location = useLocation() // ✅ Lấy URL hiện tại
+    const location = useLocation()
 
     const navItems = [
         { to: '/', icon: <FiHome size={24} />, label: 'Home' },

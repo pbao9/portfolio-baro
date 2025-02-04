@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 @plugin "daisyui";
 @import "tailwindcss-animated";
+
 @theme{
     --font-inter: 'Inter', sans-serif;
     --font-outfit: 'Outfit', sans-serif;
