@@ -14,7 +14,6 @@ const Hero = () => {
                     disabled={false}
                     speed={3}
                     className="custom-class mx-2"
-
                 />
             </h1>
             <span>
@@ -24,7 +23,7 @@ const Hero = () => {
                 products.
             </span>
 
-            <div className="flex flex-row my-2 justify-baseline lg:justify-baseline md:justify-baseline">
+            <div className="flex flex-row my-2 justify-between sm:justify-between md:justify-baseline lg:justify-baseline xl:justify-start">
                 <div className="w-1/4 text-start">
                     <div className="flex flex-row justify-start text-5xl items-center">
                         <h3>+</h3>
@@ -78,7 +77,10 @@ const Hero = () => {
                 </div>
             </div>
             <div className="inline-flex flex-row justify-between items-center gap-5 my-5">
-                <ButtonShadow title="Let's talk"  path={'mailto:pbao.business@gmail.com'}/>
+                <ButtonShadow
+                    title="Let's talk"
+                    path={'mailto:pbao.business@gmail.com'}
+                />
                 <Hyperlink path="/projects" title="My work" />
             </div>
         </div>
