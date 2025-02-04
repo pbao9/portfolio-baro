@@ -1,14 +1,36 @@
 import {Link} from "react-router";
 import {FaGithub, FaLinkedin, FaGitlab} from "react-icons/fa6";
 import {MdOutlineAlternateEmail} from "react-icons/md";
+import PixelTransition from "../blocks/Animations/PixelTransition/PixelTransition.tsx";
 
 const CardPortfolio = () => {
     return (
         <div className="shadow-lg p-6 w-80 text-center block bg-dark-custom rounded-3xl mx-auto">
-            <img
-                src="/avatar.jpg"
-                alt="Profile"
-                className="w-[250px] h-[250px] mx-auto rounded-xl object-cover border-4 shadow-green-custom border-green-custom hover:shadow-[0_0_20px_5px_rgba(0,255,0,0.7)] hover:border-white transition-all duration-500"
+            <PixelTransition
+                firstContent={
+                    <img
+                        src="/avatar.jpg"
+                        alt="Avatar"
+                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                }
+                secondContent={
+                    <div
+                        style={{
+                            width: "100%",
+                            height: "100%",
+                            display: "grid",
+                            placeItems: "center",
+                            backgroundColor: "#111"
+                        }}
+                    >
+                        <p style={{ fontWeight: 900, fontSize: "3rem", color: "#ffffff" }}>Backend Developer</p>
+                    </div>
+                }
+                gridSize={12}
+                pixelColor='#ffffff'
+                animationStepDuration={0.4}
+                className="shadow-green-custom border-green-custom hover:shadow-[0_0_20px_5px_rgba(0,255,0,0.7)] hover:border-white transition-all duration-500"
             />
             <h2 className="text-xl font-semibold text-white mt-4">
                 Baro Pham
