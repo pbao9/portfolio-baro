@@ -32,7 +32,7 @@ export const Question = () => {
     return (
         <>
             <div className='animate-fade-down'>
-                <h1 className='font-bold text-6xl mb-5'>
+                <h1 className='font-bold text-4xl sm:text-5xl md:text-6xl my-5'>
                     Frequently <br/>
                     Asked
                     <ShinyText

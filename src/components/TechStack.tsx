@@ -43,7 +43,7 @@ function TechStack() {
     }
     return (
         <div className="slider-container animate-fade-down">
-            <h1 className='font-bold text-6xl'>Top-Tier Tools for Exceptional
+            <h1 className='font-bold text-4xl sm:text-5xl md:text-6xl my-5'>Top-Tier Tools for Exceptional
                 <ShinyText
                     text="Results"
                     disabled={false}

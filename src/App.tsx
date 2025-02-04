@@ -6,6 +6,7 @@ import Projects from "./pages/Projects.tsx";
 import {Contact} from "./pages/Contact.tsx";
 import {Tools} from "./pages/Tools.tsx";
 import {Experience} from "./pages/Experience.tsx";
+import {MevivuExp} from "./pages/Experiece/MevivuExp.tsx";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                     <Route path={'/contact'} element={<Contact />} />
                     <Route path={'/tools'} element={<Tools />} />
                     <Route path={'/experience'} element={<Experience />} />
+                    <Route path={'/experience/mevivu'} element={<MevivuExp />} />
                 </Route>
             </Routes>
         </>

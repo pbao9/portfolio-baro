@@ -6,7 +6,7 @@ import Hyperlink from './input/Hyperlink'
 const Hero = () => {
     return (
         <div className="w-full animate-fade-down">
-            <h1 className="font-bold text-6xl mb-5">
+            <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl my-5">
                 Transforming Your
                 <br /> Ideas into
                 <ShinyText

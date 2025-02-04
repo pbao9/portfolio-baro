@@ -4,7 +4,7 @@ export const Collaborate = () => {
     return (
         <div className='group cursor-pointer animate-fade-down flex flex-row items-start relative bg-dark-custom hover:bg-green-custom w-full rounded-lg p-3 transition transition-all duration-500 my-[5rem]'>
             <div>
-                <h1 className='font-bold text-4xl'>
+                <h1 className='font-bold text-4xl sm:text-5xl md:text-6xl my-5'>
                     Let's<br/>
                     <span className='text-green-custom group-hover:text-white transition transition-all duration-500'>
                         collaborate

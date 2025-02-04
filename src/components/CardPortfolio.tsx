@@ -96,7 +96,7 @@ const CardPortfolio = () => {
                 </Link>
             </div>
             <Pulse />
-            <div className='py-5'></div>
+            <div className='py-2'></div>
             <ButtonShadow title="Let's talk" path={'https://zalo.me/0901430854'} />
         </div>
     )

@@ -13,10 +13,10 @@ const Master = () => {
                 <div className="flex flex-col justify-center items-center max-w-[1190px] mx-auto">
                     <Header />
                     <div className="relative z-[999] flex flex-wrap lg:flex-nowrap justify-center max-w-full px-4 md:px-10 py-10">
-                        <div className="w-full md:w-1/2 lg:w-1/4 top-10 relative lg:sticky self-start animate-fade-right">
+                        <div className="w-full md:w-1/2 lg:w-1/4 top-10 relative lg:sticky self-start animate-fade-right px-4 lg:px-0">
                             <CardPortfolio />
                         </div>
-                        <div className="w-full md:w-2/3 lg:w-3/4 p-3 rounded-lg shadow-lg pl-[5rem]">
+                        <div className="w-full md:w-2/3 lg:w-3/4 p-3 rounded-lg shadow-lg mt-15 pl-[0] lg:pl-[5rem] lg:mt-0 px-4 container">
                             <Outlet />
                             <Question />
                             <Collaborate />
