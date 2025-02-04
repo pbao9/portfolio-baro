@@ -87,9 +87,6 @@ function TechStack() {
                 <div  className='p-5 rounded-2xl mx-3'>
                     <img src='/swagger.svg' alt='swagger' width={60} height={60} className='mx-auto' />
                 </div>
-                <div  className='p-5 rounded-2xl mx-3'>
-                    <img src='/DBeaver.svg' alt='dbeaver' width={60} height={60} className='mx-auto' />
-                </div>
             </Slider>
         </div>
     )
