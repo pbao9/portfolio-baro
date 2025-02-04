@@ -1,63 +1,46 @@
-import { Link } from "react-router"; // Lỗi import ở đây cần sửa lại là react-router-dom
-import {FiBriefcase, FiFolder, FiHome, FiMail, FiTool} from "react-icons/fi";
+import { Link, useLocation } from 'react-router' // ✅ Sửa lỗi import
+import { FiBriefcase, FiFolder, FiHome, FiMail, FiTool } from 'react-icons/fi'
 
 const Header = () => {
+    const location = useLocation() // ✅ Lấy URL hiện tại
+
+    const navItems = [
+        { to: '/', icon: <FiHome size={24} />, label: 'Home' },
+        { to: '/projects', icon: <FiFolder size={24} />, label: 'Projects' },
+        { to: '/tools', icon: <FiTool size={24} />, label: 'Tools' },
+        {
+            to: '/experience',
+            icon: <FiBriefcase size={24} />,
+            label: 'Experience',
+        },
+        { to: '/contact', icon: <FiMail size={24} />, label: 'Contact' },
+    ]
+
     return (
         <nav className="w-[20rem] bg-dark-custom font-primary flex justify-around p-2 mt-5 rounded-lg top-10 z-[999] shadow-2xs">
-            <Link
-                to={'/'}
-                className="group p-2 rounded-lg transition-all duration-300 relative"
-            >
-                <div className="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-[-10px] group-hover:translate-y-[10px] text-xs text-white bg-dark-custom p-2 rounded transition-all duration-300">
-                    Home
-                </div>
-                <div className="absolute inset-0 bg-green-custom scale-0 group-hover:scale-100 transition-all duration-200 rounded-lg"></div>
-                <FiHome size={24} className="text-white relative z-10" />
-            </Link>
-            <Link
-                to={'/projects'}
-                className="group p-2 rounded-lg transition-all duration-300 relative"
-            >
-                <div className="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-[-10px] group-hover:translate-y-[10px] text-xs text-white bg-dark-custom p-2 rounded transition-all duration-300">
-                    Projects
-                </div>
-                <div className="absolute inset-0 bg-green-custom scale-0 group-hover:scale-100 transition-all duration-200 rounded-lg"></div>
-                <FiFolder size={24} className="text-white relative z-10" />
-            </Link>
-            <Link
-                to={'/tools'}
-                className="group p-2 rounded-lg transition-all duration-300 relative"
-            >
-                <div className="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-[-10px] group-hover:translate-y-[10px] text-xs text-white bg-dark-custom p-2 rounded transition-all duration-300">
-                    Tools
-                </div>
-                <div className="absolute inset-0 bg-green-custom scale-0 group-hover:scale-100 transition-all duration-200 rounded-lg"></div>
-                <FiTool size={24} className="text-white relative z-10" />
-            </Link>
-            <Link
-                to={'/experience'}
-                className="group p-2 rounded-lg transition-all duration-300 relative"
-            >
-                <div className="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-[-10px] group-hover:translate-y-[10px] text-xs text-white bg-dark-custom p-2 rounded transition-all duration-300">
-                    Experience
-                </div>
-                <div className="absolute inset-0 bg-green-custom scale-0 group-hover:scale-100 transition-all duration-200 rounded-lg"></div>
-                <FiBriefcase size={24} className="text-white relative z-10" />
-            </Link>
-            <Link
-                to={'/contact'}
-                className="group p-2 rounded-lg transition-all duration-300 relative"
-            >
-                <div className="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-[-10px] group-hover:translate-y-[10px] text-xs text-white bg-dark-custom p-2 rounded transition-all duration-300">
-                    Contact
-                </div>
-                <div className="absolute inset-0 bg-green-custom scale-0 group-hover:scale-100 transition-all duration-200 rounded-lg"></div>
-                <FiMail size={24} className="text-white relative z-10" />
-            </Link>
-
+            {navItems.map(({ to, icon, label }) => (
+                <Link
+                    key={to}
+                    to={to}
+                    className={`group p-2 rounded-lg transition-all duration-300 relative ${
+                        location.pathname === to ? 'bg-green-custom' : ''
+                    }`}
+                >
+                    <div className="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-[-10px] group-hover:translate-y-[10px] text-xs text-white bg-dark-custom p-2 rounded transition-all duration-300">
+                        {label}
+                    </div>
+                    <div
+                        className={`absolute inset-0 scale-0 group-hover:scale-100 transition-all duration-200 rounded-lg ${
+                            location.pathname === to
+                                ? 'scale-100'
+                                : 'bg-green-custom'
+                        }`}
+                    ></div>
+                    <div className="text-white relative z-10">{icon}</div>
+                </Link>
+            ))}
         </nav>
-    );
-};
+    )
+}
 
-export default Header;
-1
+export default Header
