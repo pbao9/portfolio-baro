@@ -6,6 +6,7 @@ import ShinyText from "../blocks/TextAnimations/ShinyText/ShinyText.tsx";
 function TechStack() {
     const settings = {
         dots: true,
+        arrows: false,
         infinite: true,
         slidesToShow: 6,
         slidesToScroll: 1,
@@ -41,10 +42,10 @@ function TechStack() {
         ]
     }
     return (
-        <div className="slider-container">
-            <h1 className='font-bold text-6xl'>Tech Stack I
+        <div className="slider-container animate-fade-down">
+            <h1 className='font-bold text-6xl'>Top-Tier Tools for Exceptional
                 <ShinyText
-                    text="Using"
+                    text="Results"
                     disabled={false}
                     speed={3}
                     className="custom-class mx-2"

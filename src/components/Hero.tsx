@@ -14,6 +14,7 @@ const Hero = () => {
                     disabled={false}
                     speed={3}
                     className="custom-class mx-2"
+
                 />
             </h1>
             <span>
@@ -77,7 +78,7 @@ const Hero = () => {
                 </div>
             </div>
             <div className="inline-flex flex-row justify-between items-center gap-5 my-5">
-                <ButtonShadow title="Let's talk" />
+                <ButtonShadow title="Let's talk"  path={'https://zalo.me/0901430854'}/>
                 <Hyperlink path="/projects" title="My work" />
             </div>
         </div>

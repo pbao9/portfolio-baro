@@ -6,7 +6,7 @@ export const Experience = () => {
             <Helmet>
                 <title>Baro | Experience</title>
             </Helmet>
-            Kinh nghiệm làm việc
+
         </div>
     )
 }

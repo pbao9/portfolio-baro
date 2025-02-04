@@ -1,3 +1,5 @@
+import ShinyText from "../blocks/TextAnimations/ShinyText/ShinyText.tsx";
+
 type QuestionItem = {
     question: string;
     answer: string;
@@ -32,7 +34,14 @@ export const Question = () => {
             <div className='animate-fade-down'>
                 <h1 className='font-bold text-6xl mb-5'>
                     Frequently <br/>
-                    Asked <span className='text-green-custom'>Questions</span>
+                    Asked
+                    <ShinyText
+                        text="Questions"
+                        disabled={false}
+                        speed={3}
+                        className="custom-class mx-2"
+
+                    />
                 </h1>
 
                 {questions.map((item, index) => (
