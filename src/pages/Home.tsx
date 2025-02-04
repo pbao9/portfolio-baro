@@ -4,6 +4,7 @@ const Home = () => {
         <Helmet>
             <title>Baro | Home</title>
         </Helmet>
+
     </div>
 
 }

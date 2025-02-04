@@ -9,7 +9,7 @@ import Squares from "../blocks/Backgrounds/Squares/Squares.tsx";
 const Master = () => {
     return (
         <div className='relative'>
-            <div className="bg-black opacity-90 min-h-screen text-white font-inter w-full relative">
+            <div className="bg-black opacity-90 min-h-screen text-white font-outfit w-full relative">
                 <div className="flex flex-col justify-center items-center max-w-[1440px] mx-auto">
                     <Header />
 

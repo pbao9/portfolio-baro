@@ -2,6 +2,7 @@ import {Link} from "react-router";
 import {FaGithub, FaLinkedin, FaGitlab} from "react-icons/fa6";
 import {MdOutlineAlternateEmail} from "react-icons/md";
 import PixelTransition from "../blocks/Animations/PixelTransition/PixelTransition.tsx";
+import {Pulse} from "./partials/Pulse.tsx";
 
 const CardPortfolio = () => {
     return (
@@ -16,15 +17,20 @@ const CardPortfolio = () => {
                 }
                 secondContent={
                     <div
-                        style={{
-                            width: "100%",
-                            height: "100%",
-                            display: "grid",
-                            placeItems: "center",
-                            backgroundColor: "#111"
-                        }}
+                        // style={{
+                        //     width: "100%",
+                        //     height: "100%",
+                        //     display: "grid",
+                        //     placeItems: "center",
+                        //     backgroundColor: "#111"
+                        // }}
                     >
-                        <p style={{ fontWeight: 900, fontSize: "3rem", color: "#ffffff" }}>Backend Developer</p>
+                        {/*<p style={{ fontWeight: 900, fontSize: "3rem", color: "#ffffff" }}>Backend Developer</p>*/}
+                        <img
+                            src="/icon.jpg"
+                            alt="Avatar"
+                            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                        />
                     </div>
                 }
                 gridSize={12}
@@ -81,9 +87,10 @@ const CardPortfolio = () => {
                                              className="text-green-custom group-hover:text-white transition transition-all duration-500 relative z-10"/>
                 </Link>
             </div>
+            <Pulse/>
             <button
                 className="text-green-custom hover:before:bg-green-custom border-green-custom relative h-[40px] w-30 overflow-hidden border border-green-custom bg-white rounded-xl px-3 text-green-custom shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-green-custom before:transition-all before:duration-500 hover:text-white hover:shadow-green-custom hover:before:left-0 hover:before:w-full">
-                <Link to={'https://zalo.me/0901430854'} target={'_blank'} className="relative z-10">Contact me</Link>
+                <Link to={'https://zalo.me/0901430854'} target={'_blank'} className="relative z-10">Let's talk </Link>
             </button>
 
 
