@@ -29,7 +29,7 @@ const Hero = () => {
                         <h3>+</h3>
                         <CountUp
                             from={100}
-                            to={2}
+                            to={1}
                             separator=","
                             direction="up"
                             duration={1}
