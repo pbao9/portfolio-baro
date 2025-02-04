@@ -97,7 +97,7 @@ const CardPortfolio = () => {
             </div>
             <Pulse />
             <div className='py-2'></div>
-            <ButtonShadow title="Let's talk" path={'https://zalo.me/0901430854'} />
+            <ButtonShadow title="Let's talk" path={'mailto:pbao.business@gmail.com'} />
         </div>
     )
 }

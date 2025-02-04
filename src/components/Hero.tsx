@@ -78,7 +78,7 @@ const Hero = () => {
                 </div>
             </div>
             <div className="inline-flex flex-row justify-between items-center gap-5 my-5">
-                <ButtonShadow title="Let's talk"  path={'https://zalo.me/0901430854'}/>
+                <ButtonShadow title="Let's talk"  path={'mailto:pbao.business@gmail.com'}/>
                 <Hyperlink path="/projects" title="My work" />
             </div>
         </div>
