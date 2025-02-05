@@ -7,7 +7,7 @@ export default defineConfig({
     plugins: [react(), tailwindcss()],
     build: {
         rollupOptions: {
-            input: './dist/index.html',
+            input: 'index.html',
         },
     },
 })
