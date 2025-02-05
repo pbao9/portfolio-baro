@@ -1,10 +1,9 @@
-# wrangler.toml
-name = "portfolio-barodev"
+name = "dev"
 type = "typescript"
+
 
 [build]
 command = "npm run build"
+upload = { format = "service-worker" }
 
-[site]
-bucket = "./dist"
-entry-point = "index.html" 
+main = "./dist/index.html" 
