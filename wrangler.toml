@@ -1,0 +1,10 @@
+# wrangler.toml
+name = "portfolio-barodev"
+type = "typescript"
+
+[build]
+command = "npm run build"
+
+[site]
+bucket = "./dist"
+entry-point = "index.html" 
