@@ -11,7 +11,7 @@ const CardPortfolio = () => {
             <PixelTransition
                 firstContent={
                     <img
-                        src="/avatar.jpg"
+                        src="/avatar.png"
                         alt="Avatar"
                         style={{
                             width: '100%',
@@ -96,8 +96,11 @@ const CardPortfolio = () => {
                 </Link>
             </div>
             <Pulse />
-            <div className='py-2'></div>
-            <ButtonShadow title="Let's talk" path={'mailto:pbao.business@gmail.com'} />
+            <div className="py-2"></div>
+            <ButtonShadow
+                title="Let's talk"
+                path={'mailto:pbao.business@gmail.com'}
+            />
         </div>
     )
 }
