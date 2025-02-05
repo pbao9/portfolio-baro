@@ -1,6 +1,0 @@
-name = "portfolio-barodev" 
-type = "javascript"  
-
-[build]
-command = "npm run build"   
-directory = "./dist"      
