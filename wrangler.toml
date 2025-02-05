@@ -1,9 +1,0 @@
-name = "dev"
-type = "typescript"
-
-
-[build]
-command = "npm run build"
-upload = { format = "service-worker" }
-
-main = "./dist/index.html" 
