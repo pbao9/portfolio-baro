@@ -9,7 +9,7 @@ const Footer = () => {
 
             <div className="fixed bottom-5 right-5 z-[999]">
                 <ButtonShadow
-                    path="https://www.facebook.com/"
+                    path="https://github.com/pbao9/portfolio-baro/"
                     title="Want this template? Contact now!"
                 />
             </div>
