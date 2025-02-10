@@ -6,16 +6,16 @@ import { TitleCenter } from '../components/partials/TitleCenter'
 
 const projects = [
     {
-        title: 'Project Ecommerce API/Admin 🛒',
-        description: [
-            'Developed an API and Admin CMS / App for Ecommerce App',
-            'Optimized database queries with Eloquent ORM for better performance.',
-        ],
-        tech: ['Laravel', 'Postman', 'MySQL'],
-        cmsFrontend: ['ReactJS', 'Tailwind'],
+        title: 'Project BuzzMart API/Admin/User 🛒',
+        description: ['Updating...', ''],
+        tech: ['nodejs', 'express', 'MySQL'],
+        cmsFrontend: ['ReactJS', 'Tailwind', 'NextJS'],
         appFrontend: ['ReactJS', 'Expo', 'Paper-logo'],
-        link: 'https://gitlab.com/ecom-api-app-cms',
-        date: '22/01/2025 - 10/02/2025',
+        link: [
+            'https://gitlab.com/pbao9/backendbuzzmart',
+            'https://gitlab.com/pbao9/frontendbuzzmart',
+        ],
+        date: 'onready',
     },
     {
         title: 'Project VisonLand API/Admin 🛸',
@@ -148,7 +148,21 @@ const Projects = () => {
                         <p className="flex items-center gap-2 text-white my-3">
                             Duration: {project.date}
                         </p>
-                        <ButtonShadow title={'Link Demo'} path={project.link} />
+
+                        {Array.isArray(project.link) ? (
+                            project.link.map((link, idx) => (
+                                <ButtonShadow
+                                    key={idx}
+                                    title={`Link ${idx + 1}`}
+                                    path={link}
+                                />
+                            ))
+                        ) : (
+                            <ButtonShadow
+                                title={'Link Demo'}
+                                path={project.link}
+                            />
+                        )}
                     </SpotlightCard>
                 ))}
             </div>
