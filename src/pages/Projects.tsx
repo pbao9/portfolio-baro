@@ -1,19 +1,18 @@
-import { Helmet } from 'react-helmet-async';
+import {Helmet} from 'react-helmet-async';
 import SpotlightCard from '../blocks/Components/SpotlightCard/SpotlightCard';
 import ButtonShadow from '../components/input/Button';
 import ShinyText from '../blocks/TextAnimations/ShinyText/ShinyText';
-import { TitleCenter } from '../components/partials/TitleCenter';
+import {TitleCenter} from '../components/partials/TitleCenter';
 
 const projects = [
     {
-        title: 'Project Fishing Booking API/Admin 🌟',
-        description: [
-            'Developed an API and Admin CMS for managing fishing spots. Introduced an event feature allowing lower-rank players to earn rewards and commissions through referral codes.',
-            'Streamlined commission transfers to app and bank accounts with admin approval for better financial management.',
-        ],
+        title: 'Project Ecommerce API/Admin 🛒',
+        description: ['Developed an API and Admin CMS / App for Ecommerce App', 'Optimized database queries with Eloquent ORM for better performance.'],
         tech: ['Laravel', 'Postman', 'MySQL'],
-        link: 'https://github.com/pbao9/VipFishing',
-        date: '06/2024 - 09/2024'
+        cmsFrontend: ['ReactJS', 'Tailwind'],
+        appFrontend: ['ReactJS', 'Expo', 'Paper-logo'],
+        link: 'https://gitlab.com/ecom-api-app-cms',
+        date: '22/01/2025 - 10/02/2025'
     },
     {
         title: 'Project VisonLand API/Admin 🛸',
@@ -27,14 +26,28 @@ const projects = [
         date: '09/2024 - 11/2024'
     },
     {
-        title: 'Project Ecommerce API/Admin 🛒',
-        description: ['Developed an API and Admin CMS / App for Ecommerce App', 'Optimized database queries with Eloquent ORM for better performance.'],
+        title: 'Project Fishing Booking API/Admin 🌟',
+        description: [
+            'Developed an API and Admin CMS for managing fishing spots. Introduced an event feature allowing lower-rank players to earn rewards and commissions through referral codes.',
+            'Streamlined commission transfers to app and bank accounts with admin approval for better financial management.',
+        ],
         tech: ['Laravel', 'Postman', 'MySQL'],
-        cmsFrontend: ['ReactJS', 'Tailwind'],
-        appFrontend: ['ReactJS', 'Expo'],
-        link: 'https://gitlab.com/ecom-api-app-cms',
-        date: '22/01/2025 - 10/02/2025'
+        link: 'https://github.com/pbao9/VipFishing',
+        date: '06/2024 - 09/2024'
     },
+    {
+        title: 'Project Lafresh Ecommerce 🌟',
+        description: [
+            'The Lafresh project is an eCommerce website specializing in selling bottled and packaged water',
+            'The platform includes a unique promotional system where customers receive bonus products based on product categories (Bottle/Pack)',
+            'The system is designed to support two key roles: \'Distributors\' and \'Retail Sellers,\' ensuring seamless order management and efficient product distribution'
+        ],
+        tech: ['Laravel', 'Postman', 'MySQL'],
+        link: 'https://github.com/pbao9/Lafresh-Ecommerce',
+        date: '01/2024 - 04/2024'
+    },
+
+
 ];
 
 const Projects = () => {
@@ -46,25 +59,27 @@ const Projects = () => {
 
             <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl mb-5">
                 Recent Projects and
-                <ShinyText text="Achievements" disabled={false} speed={3} className="custom-class" />
+                <ShinyText text="Achievements" disabled={false} speed={3} className="custom-class"/>
             </h1>
 
             <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
                 {projects.map((project, index) => (
-                    <SpotlightCard key={index} className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
+                    <SpotlightCard key={index} className="custom-spotlight-card"
+                                   spotlightColor="rgba(0, 229, 255, 0.2)">
                         <h1 className="font-semibold text-xl sm:text-2xl mb-5">{project.title}</h1>
                         <ul className="mb-3 text-sm sm:text-base">
                             {project.description.map((desc, idx) => (
                                 <li key={idx} className="mb-2">{desc}</li>
                             ))}
                         </ul>
-                        <TitleCenter title={'Tech stack'} />
+                        <TitleCenter title={'Tech stack'}/>
                         <div className='my-3'>
                             <p className='flex flex-row items-center gap-4 my-3'>
                                 Backend:
                                 <div className='flex flex-row gap-4'>
                                     {project.tech.map((tech, idx) => (
-                                        <img key={idx} src={`/${tech.toLowerCase()}.svg`} alt={tech} width={25} height={25} />
+                                        <img key={idx} src={`/${tech.toLowerCase()}.svg`} alt={tech} width={25}
+                                             height={25}/>
                                     ))}
                                 </div>
                             </p>
@@ -73,7 +88,8 @@ const Projects = () => {
                                     CMS Frontend:
                                     <div className='flex flex-row gap-4'>
                                         {project.cmsFrontend.map((tech, idx) => (
-                                            <img key={idx} src={`/${tech.toLowerCase()}.svg`} alt={tech} width={25} height={25} />
+                                            <img key={idx} src={`/${tech.toLowerCase()}.svg`} alt={tech} width={25}
+                                                 height={25}/>
                                         ))}
                                     </div>
                                 </p>
@@ -83,17 +99,24 @@ const Projects = () => {
                                     App Frontend:
                                     <div className='flex flex-row gap-4'>
                                         {project.appFrontend.map((tech, idx) => (
-                                            <img key={idx} src={`/${tech.toLowerCase()}.svg`} alt={tech} width={25} height={25} className={tech === 'Expo' ? 'bg-white rounded-xl' : ''} />
+                                            <img
+                                                key={idx}
+                                                src={`/${tech.toLowerCase()}.svg`}
+                                                alt={tech}
+                                                width={25}
+                                                height={25}
+                                                className={tech === 'Expo' || tech === 'Paper-logo' ? 'bg-white rounded-xl' : ''}
+                                            />
                                         ))}
                                     </div>
                                 </p>
                             )}
                         </div>
-                        <TitleCenter title={'Timeline'} />
+                        <TitleCenter title={'Timeline'}/>
                         <p className="flex items-center gap-2 text-white my-3">
                             Duration: {project.date}
                         </p>
-                        <ButtonShadow title={'Link Demo'} path={project.link} />
+                        <ButtonShadow title={'Link Demo'} path={project.link}/>
                     </SpotlightCard>
                 ))}
             </div>
