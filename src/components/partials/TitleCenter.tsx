@@ -1,4 +1,4 @@
-import ShinyText from "../../blocks/TextAnimations/ShinyText/ShinyText.tsx";
+import ShinyText from '../../blocks/TextAnimations/ShinyText/ShinyText.tsx'
 
 export const TitleCenter = ({ title }: { title: string }) => {
     return (
@@ -7,5 +7,5 @@ export const TitleCenter = ({ title }: { title: string }) => {
                 <ShinyText text={title} />
             </h1>
         </div>
-    );
-};
+    )
+}
