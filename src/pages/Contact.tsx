@@ -1,6 +1,6 @@
-import { Helmet } from "react-helmet-async";
-import ShinyText from "../blocks/TextAnimations/ShinyText/ShinyText.tsx";
-import {Link} from "react-router";
+import { Helmet } from 'react-helmet-async'
+import ShinyText from '../blocks/TextAnimations/ShinyText/ShinyText.tsx'
+import { Link } from 'react-router'
 
 export const Contact = () => {
     return (
@@ -8,8 +8,8 @@ export const Contact = () => {
             <Helmet>
                 <title>Baro | Contact</title>
             </Helmet>
-            <div className='w-full animate-fade-down'>
-                <h1 className='font-bold text-4xl sm:text-5xl md:text-6xl my-5'>
+            <div className="w-full animate-fade-down">
+                <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl my-5">
                     Let’s Create
                     <ShinyText
                         text="Something Amazing"
@@ -20,15 +20,17 @@ export const Contact = () => {
                 </h1>
             </div>
 
-            <div className="max-w-4xl mx-auto p-5 bg-dark-custom rounded-lg shadow-lg">
+            <div className="max-w-4xl mx-auto p-5 bg-dark-custom rounded-lg shadow-lg animate-fade-down">
                 <form
                     className="space-y-6"
                     action="YOUR_FORM_ACTION_URL"
                     method="POST"
                 >
-
                     <div>
-                        <label htmlFor="name" className="block text-lg font-medium text-white">
+                        <label
+                            htmlFor="name"
+                            className="block text-lg font-medium text-white"
+                        >
                             Full Name
                         </label>
                         <input
@@ -42,7 +44,10 @@ export const Contact = () => {
                     </div>
 
                     <div>
-                        <label htmlFor="email" className="block text-lg font-medium text-white">
+                        <label
+                            htmlFor="email"
+                            className="block text-lg font-medium text-white"
+                        >
                             Email Address
                         </label>
                         <input
@@ -57,7 +62,10 @@ export const Contact = () => {
 
                     {/* Message */}
                     <div>
-                        <label htmlFor="message" className="block text-lg font-medium text-white">
+                        <label
+                            htmlFor="message"
+                            className="block text-lg font-medium text-white"
+                        >
                             Your Message
                         </label>
                         <textarea
@@ -76,14 +84,16 @@ export const Contact = () => {
                             type="submit"
                             className="text-green-custom hover:before:bg-green-custom relative h-[40px] w-full overflow-hidden border border-green-custom bg-white rounded-xl px-3 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-green-custom before:transition-all before:duration-500 hover:text-white hover:shadow-green-custom hover:before:left-0 hover:before:w-full"
                         >
-                            <Link to={'mailto:pbao.business@gmail.com'} className='relative z-10'>
+                            <Link
+                                to={'mailto:pbao.business@gmail.com'}
+                                className="relative z-10"
+                            >
                                 Trust your crazy ideas
                             </Link>
-
                         </button>
                     </div>
                 </form>
             </div>
         </div>
-    );
-};
+    )
+}
