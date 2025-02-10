@@ -5,8 +5,8 @@ import CardPortfolio from '../components/CardPortfolio.tsx'
 import { Question } from '../components/Question.tsx'
 import { Collaborate } from '../components/Collaborate.tsx'
 import Squares from '../blocks/Backgrounds/Squares/Squares.tsx'
-
 const Master = () => {
+
     return (
         <div className="relative">
             <div className="bg-black opacity-90 min-h-screen text-white font-outfit w-full relative">
@@ -20,9 +20,9 @@ const Master = () => {
                             <Outlet />
                             <Question />
                             <Collaborate />
+
                         </div>
                     </div>
-
                     <Footer />
                 </div>
                 <Squares />
