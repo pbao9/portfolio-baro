@@ -12,6 +12,7 @@
 
     --animate-pluse-expand: pulseExpand 2s infinite;
     --animate-shine: shine 5s linear infinite;
+    --animate-glitch: glitch 2s linear infinite;
 
     @keyframes shine {
         0% {
@@ -44,22 +45,12 @@
             transform: translate(0);
             opacity: 1;
         }
-        20% {
-            transform: translate(-2px, 2px);
-            opacity: 0.8;
-        }
-        40% {
-            transform: translate(2px, -2px);
-            opacity: 1;
-        }
+
         60% {
             transform: translate(-2px, 2px);
             opacity: 0.8;
         }
-        80% {
-            transform: translate(2px, -2px);
-            opacity: 1;
-        }
+
         100% {
             transform: translate(0);
             opacity: 1;
@@ -99,7 +90,7 @@ html {
     font-weight: bold;
     position: relative;
     display: inline-block;
-    color: #ff0000; /* Màu chính */
+    color: #ff0000;
     text-shadow: 2px 2px 0 #00ff00, -2px -2px 0 #0000ff;
     animation: glitch 0.5s infinite alternate;
 }
