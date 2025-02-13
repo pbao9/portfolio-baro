@@ -38,8 +38,89 @@
             transform: scale(0.8);
         }
     }
+
+    @keyframes glitch {
+        0% {
+            transform: translate(0);
+            opacity: 1;
+        }
+        20% {
+            transform: translate(-2px, 2px);
+            opacity: 0.8;
+        }
+        40% {
+            transform: translate(2px, -2px);
+            opacity: 1;
+        }
+        60% {
+            transform: translate(-2px, 2px);
+            opacity: 0.8;
+        }
+        80% {
+            transform: translate(2px, -2px);
+            opacity: 1;
+        }
+        100% {
+            transform: translate(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes glitch2 {
+        0% {
+            transform: translate(0);
+            opacity: 1;
+        }
+        20% {
+            transform: translate(2px, -2px);
+            opacity: 0.8;
+        }
+        40% {
+            transform: translate(-2px, 2px);
+            opacity: 1;
+        }
+        60% {
+            transform: translate(2px, -2px);
+            opacity: 0.8;
+        }
+        80% {
+            transform: translate(-2px, 2px);
+            opacity: 1;
+        }
+    }
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+.glitch-text {
+    font-size: 6rem;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    color: #ff0000; /* Màu chính */
+    text-shadow: 2px 2px 0 #00ff00, -2px -2px 0 #0000ff;
+    animation: glitch 0.5s infinite alternate;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+    content: '404';
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.75;
+}
+
+.glitch-text::before {
+    color: #00ff00;
+    transform: translate(-2px, -2px);
+    animation: glitch 0.5s infinite alternate;
+}
+
+.glitch-text::after {
+    color: #0000ff;
+    transform: translate(2px, 2px);
+    animation: glitch2 0.5s infinite alternate;
 }

@@ -23,8 +23,8 @@ function App() {
                         path={'/experience/mevivu'}
                         element={<MevivuExp />}
                     />
+                    <Route path="*" element={<NotFound />} />
                 </Route>
-                <Route path="*" element={<NotFound />} />
             </Routes>
         </>
     )
