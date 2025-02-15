@@ -25,7 +25,7 @@ const projects = [
         ],
         tech: null,
         cmsFrontend: ['ReactJS', 'Tailwind', 'NextJS'],
-        link: ['https://edu-pham-hoang-phuc.netlify.app/'],
+        link: ['https://edu-pham-hoang-phuc.id.vn/'],
         date: '12/02/2025 - 12/02/2025',
     },
     {
