@@ -18,6 +18,30 @@ const projects = [
         date: 'onready',
     },
     {
+        title: 'TOEIC Mastery Course 🎯',
+        description: [
+            'Enhance your English skills and boost your TOEIC score with our expertly crafted course.',
+            'Includes practice tests, real-world scenarios, and personalized feedback to ensure success.',
+        ],
+        tech: null,
+        cmsFrontend: ['ReactJS', 'Tailwind', 'NextJS'],
+        link: ['https://edu-pham-hoang-phuc.netlify.app/'],
+        date: '12/02/2025 - 12/02/2025',
+    },
+    {
+        title: 'Project Ecommerce API/Admin/User 🛒',
+        description: [
+            'A comprehensive eCommerce solution designed to provide seamless online shopping experiences.',
+            'Includes a powerful API, an intuitive admin dashboard, and a user-friendly storefront.',
+            'Supports secure payments, order tracking, and an advanced product management system.',
+        ],
+        tech: ['Laravel', 'MySQL'],
+        cmsFrontend: ['ReactJS', 'Tailwind'],
+        appFrontend: ['ReactJS', 'Expo', 'Paper-logo'],
+        link: ['https://gitlab.com/ecom-api-app-cms'],
+        date: '28/01/2025 - 12/02/2025',
+    },
+    {
         title: 'Project VisonLand API/Admin 🛸',
         description: [
             'Developed an API and Admin CMS for real estate postings. Implemented payment functions for direct and indirect commissions using in-app currency, with logic for commission calculations based on referral codes.',
@@ -76,34 +100,40 @@ const Projects = () => {
                         spotlightColor="rgba(0, 229, 255, 0.2)"
                     >
                         <h1 className="font-semibold text-xl sm:text-2xl mb-5">
-                            {project.title}
+                            {project.title || 'No title available'}
                         </h1>
                         <ul className="mb-3 text-sm sm:text-base">
-                            {project.description.map((desc, idx) => (
-                                <li key={idx} className="mb-2">
-                                    {desc}
-                                </li>
-                            ))}
+                            {project.description?.length > 0 ? (
+                                project.description.map((desc, idx) => (
+                                    <li key={idx} className="mb-2">
+                                        {desc}
+                                    </li>
+                                ))
+                            ) : (
+                                <li>No description available</li>
+                            )}
                         </ul>
                         <TitleCenter title={'Tech stack'} />
                         <div className="my-3">
-                            <p className="flex flex-row items-center gap-4 my-3">
-                                Backend:
-                                <div className="flex flex-row gap-4">
-                                    {project.tech.map((tech, idx) => (
-                                        <img
-                                            key={idx}
-                                            src={`/${tech.toLowerCase()}.svg`}
-                                            alt={tech}
-                                            width={25}
-                                            height={25}
-                                        />
-                                    ))}
-                                </div>
-                            </p>
+                            {project.tech && (
+                                <p className="flex flex-row items-center gap-4 my-3">
+                                    Backend:
+                                    <div className="flex flex-row gap-4">
+                                        {project.tech.map((tech, idx) => (
+                                            <img
+                                                key={idx}
+                                                src={`/${tech.toLowerCase()}.svg`}
+                                                alt={tech}
+                                                width={25}
+                                                height={25}
+                                            />
+                                        ))}
+                                    </div>
+                                </p>
+                            )}
                             {project.cmsFrontend && (
                                 <p className="flex flex-row items-center gap-4 my-3">
-                                    CMS Frontend:
+                                    Frontend:
                                     <div className="flex flex-row gap-4">
                                         {project.cmsFrontend.map(
                                             (tech, idx) => (
@@ -131,12 +161,6 @@ const Projects = () => {
                                                     alt={tech}
                                                     width={25}
                                                     height={25}
-                                                    className={
-                                                        tech === 'Expo' ||
-                                                        tech === 'Paper-logo'
-                                                            ? 'bg-white rounded-xl'
-                                                            : ''
-                                                    }
                                                 />
                                             )
                                         )}
@@ -146,23 +170,23 @@ const Projects = () => {
                         </div>
                         <TitleCenter title={'Timeline'} />
                         <p className="flex items-center gap-2 text-white my-3">
-                            Duration: {project.date}
+                            Duration: {project.date || 'No date available'}
                         </p>
 
-                        {Array.isArray(project.link) ? (
-                            project.link.map((link, idx) => (
-                                <ButtonShadow
-                                    key={idx}
-                                    title={`Link ${idx + 1}`}
-                                    path={link}
-                                />
-                            ))
-                        ) : (
-                            <ButtonShadow
-                                title={'Link Demo'}
-                                path={project.link}
-                            />
-                        )}
+                        {Array.isArray(project.link)
+                            ? project.link.map((link, idx) => (
+                                  <ButtonShadow
+                                      key={idx}
+                                      title={`Link ${idx + 1}`}
+                                      path={link}
+                                  />
+                              ))
+                            : project.link && (
+                                  <ButtonShadow
+                                      title={'Link Demo'}
+                                      path={project.link}
+                                  />
+                              )}
                     </SpotlightCard>
                 ))}
             </div>
