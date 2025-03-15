@@ -16,6 +16,20 @@
                 "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-lien-he-2025-03-15-10_35_42_mne0t5.webp"
             ],
             "link": "https://example.com/ecommerce"
+        },
+        {
+            "id": 2,
+            "title": "Event Website",
+            "description": "A full-featured e-commerce website with payment integration.",
+            "thumbnail": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742042622/screencapture-localhost-sukienanphat-2025-03-15-19_26_22_epsztg.webp",
+            "duration": "1-3 days",
+            "price": 500000,
+            "images": [
+                "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742042622/screencapture-localhost-sukienanphat-2025-03-15-19_26_22_epsztg.webp",
+                "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742042623/screencapture-localhost-sukienanphat-gioi-thieu-2025-03-15-19_26_52_rup2ge.webp",
+                "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742042622/screencapture-localhost-sukienanphat-category-to-chuc-su-kien-chuyen-nghiep-2025-03-15-19_28_32_dos83s.webp" 
+            ],
+            "link": "https://example.com/ecommerce"
         }
     ]
 }
