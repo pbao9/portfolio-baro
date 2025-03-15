@@ -33,7 +33,7 @@ const CardPortfolio = () => {
                         />
                     </div>
                 }
-                gridSize={12}
+                gridSize={5}
                 pixelColor="#ffffff"
                 animationStepDuration={0.4}
                 className="shadow-green-custom border-green-custom hover:shadow-[0_0_20px_5px_rgba(0,255,0,0.7)] hover:border-white transition-all duration-500"
@@ -41,6 +41,9 @@ const CardPortfolio = () => {
             <h1 className="text-4xl font-semibold text-white mt-4">
                 Baro Pham
             </h1>
+            <p className="text-white text-sm mt-1 uppercase font-bold">
+                Devro Team
+            </p>
 
             <p className="text-white text-sm mt-1">
                 Web Developer HCM, Vietnam

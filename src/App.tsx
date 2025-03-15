@@ -8,6 +8,8 @@ import { Tools } from './pages/Tools.tsx'
 import { Experience } from './pages/Experience.tsx'
 import { MevivuExp } from './pages/Experiece/MevivuExp.tsx'
 import NotFound from './pages/NotFound.tsx'
+import MasterProject from './pages/Projects/Master.tsx'
+import ProjectList from './pages/Projects/Index.tsx'
 
 function App() {
     return (
@@ -24,6 +26,10 @@ function App() {
                         element={<MevivuExp />}
                     />
                     <Route path="*" element={<NotFound />} />
+                </Route>
+                <Route path="/projects-list/" element={<MasterProject />}>
+                    <Route index element={<ProjectList />} />
+                    <Route path={'view/:id'} element={<Projects />} />
                 </Route>
             </Routes>
         </>

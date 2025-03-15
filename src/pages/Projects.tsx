@@ -3,6 +3,7 @@ import SpotlightCard from '../blocks/Components/SpotlightCard/SpotlightCard'
 import ButtonShadow from '../components/input/Button'
 import ShinyText from '../blocks/TextAnimations/ShinyText/ShinyText'
 import { TitleCenter } from '../components/partials/TitleCenter'
+import { MdOutlineArrowRightAlt } from 'react-icons/md'
 
 const projects = [
     {
@@ -189,6 +190,9 @@ const Projects = () => {
                               )}
                     </SpotlightCard>
                 ))}
+            </div>
+            <div className="w-50 mx-auto my-3">
+                <ButtonShadow title={'View more'} path={'/projects-list'} icon={<MdOutlineArrowRightAlt />} />
             </div>
         </div>
     )
