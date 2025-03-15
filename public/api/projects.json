@@ -4,13 +4,16 @@
             "id": 1,
             "title": "Media Website",
             "description": "A full-featured e-commerce website with payment integration.",
-            "thumbnail": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742009775/screencapture-mediatemplate-local-2025-03-15-10_01_43_rvly1i.png",
+            "thumbnail": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp",
             "duration": "1-3 days",
             "price": 500000,
             "images": [
-                "https://example.com/ecommerce.png",
-                "https://example.com/ecommerce.png",
-                "https://example.com/ecommerce.png"
+                "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp",
+                "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-gioi-thieu-2025-03-15-10_34_45_j1vizz.webp",
+                "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033120/screencapture-mediatemplate-local-chuyen-muc-tin-tuc-2025-03-15-10_34_57_sqamtu.webp",
+                "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-du-an-2025-03-15-10_35_11_ce1ssu.webp",
+                "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033120/screencapture-mediatemplate-local-thanh-vien-2025-03-15-10_35_25_sb1se6.webp",
+                "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-lien-he-2025-03-15-10_35_42_mne0t5.webp"
             ],
             "link": "https://example.com/ecommerce"
         }
