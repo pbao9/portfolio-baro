@@ -2,7 +2,6 @@ import { Outlet } from 'react-router'
 import Header from '../../components/partials/Header'
 import Footer from '../../components/partials/Footer'
 import Squares from '../../blocks/Backgrounds/Squares/Squares'
-import SplashCursor from '../../blocks/Animations/SplashCursor/SplashCursor'
 
 const MasterProject = () => {
     return (
@@ -16,7 +15,6 @@ const MasterProject = () => {
                     <Footer />
                 </div>
                 <Squares />
-                <SplashCursor />
             </div>
         </div>
     )

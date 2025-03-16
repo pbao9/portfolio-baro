@@ -4,6 +4,7 @@ import ButtonShadow from '../../components/input/Button'
 import { FiArrowRight } from 'react-icons/fi'
 import { Helmet } from 'react-helmet-async'
 import gsap from 'gsap'
+import ShinyText from '../../blocks/TextAnimations/ShinyText/ShinyText'
 
 interface Project {
     id: number
@@ -50,40 +51,52 @@ const ProjectList = () => {
             <Helmet>
                 <title>Baro | Projects</title>
             </Helmet>
-            <div
-                ref={projectRef}
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 my-4"
-            >
-                {projects.map((project) => (
-                    <div key={project.id} className="project-item">
-                        <ViewPort data={project.thumbnail} />
-                        <div className="bg-[#222] rounded-lg w-full px-10 pt-3 shadow-lg mt-3">
-                            <div className="text-center font-semibold text-white">
-                                Webiste: {project.title} 💻
-                            </div>
-                            <div className="text-center font-semibold text-white">
-                                Duration: {project.duration} ⏲️
-                            </div>
-                            <div className="text-center font-semibold text-white">
-                                Price: {''}
-                                {project.price === 0
-                                    ? 'Negotiable'
-                                    : new Intl.NumberFormat('vi-VN', {
-                                          style: 'currency',
-                                          currency: 'VND',
-                                      }).format(project.price)}
-                                💰
-                            </div>
-                            <div className="w-full mx-auto py-3">
-                                <ButtonShadow
-                                    path={`/projects-list/view/${project.id}`}
-                                    title="View detail"
-                                    icon={<FiArrowRight />}
-                                />
+
+            <div className='my-10'>
+                <div className="text-center">
+                    <ShinyText
+                        text={'Projects'}
+                        disabled={false}
+                        speed={3}
+                        className="font-bold text-4xl sm:text-5xl md:text-6xl text-center mb-3"
+                    />
+                </div>
+
+                <div
+                    ref={projectRef}
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 my-4"
+                >
+                    {projects.map((project) => (
+                        <div key={project.id} className="project-item">
+                            <ViewPort data={project.thumbnail} />
+                            <div className="bg-[#222] rounded-lg w-full px-10 pt-3 shadow-lg mt-3">
+                                <div className="text-center font-semibold text-white">
+                                    Webiste: {project.title} 💻
+                                </div>
+                                <div className="text-center font-semibold text-white">
+                                    Duration: {project.duration} ⏲️
+                                </div>
+                                <div className="text-center font-semibold text-white">
+                                    Price: {''}
+                                    {project.price === 0
+                                        ? 'Negotiable'
+                                        : new Intl.NumberFormat('vi-VN', {
+                                              style: 'currency',
+                                              currency: 'VND',
+                                          }).format(project.price)}
+                                    💰
+                                </div>
+                                <div className="w-full mx-auto py-3">
+                                    <ButtonShadow
+                                        path={`/projects-list/view/${project.id}`}
+                                        title="View detail"
+                                        icon={<FiArrowRight />}
+                                    />
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </>
     )

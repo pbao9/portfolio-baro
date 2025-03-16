@@ -30,7 +30,8 @@
                 "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742042623/screencapture-localhost-sukienanphat-gioi-thieu-2025-03-15-19_26_52_rup2ge.webp",
                 "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742042622/screencapture-localhost-sukienanphat-category-to-chuc-su-kien-chuyen-nghiep-2025-03-15-19_28_32_dos83s.webp"
             ],
-            "link": "https://example.com/ecommerce"
+            "link": "https://example.com/ecommerce",
+            "image_phone": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742042622/screencapture-localhost-sukienanphat-category-to-chuc-su-kien-chuyen-nghiep-2025-03-15-19_28_32_dos83s.webp"
         }
     ]
 }

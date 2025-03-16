@@ -6,6 +6,9 @@ import { Swiper as SwiperType } from 'swiper'
 import SliderDesktop from '../../components/partials/Slider'
 import { Project } from '../../types/Project'
 import SpotlightCard from '../../blocks/Components/SpotlightCard/SpotlightCard'
+import ShinyText from '../../blocks/TextAnimations/ShinyText/ShinyText'
+import ButtonShadow from '../../components/input/Button'
+import { FiInbox } from 'react-icons/fi'
 
 const ProjectDetail: React.FC = () => {
     const { id } = useParams<{ id: string }>()
@@ -31,19 +34,32 @@ const ProjectDetail: React.FC = () => {
         return <div className="text-center text-white">Project not found.</div>
 
     return (
-        <div className='my-10'>
-            <SpotlightCard>
-                <h1 className="project-title text-center uppercase font-bold text-4xl">{project?.title}</h1>
+        <div className="my-10">
+            <SpotlightCard className="w-72 mx-auto">
                 <div className="project-info">
+                    <ShinyText
+                        text={project?.title || 'Project Title'}
+                        disabled={false}
+                        speed={3}
+                        className="font-bold text-2xl text-center"
+                    />
                     <p className="project-price">
                         <strong>Price:</strong>{' '}
                         {project?.price.toLocaleString()} VND
                     </p>
                 </div>
-                <h1 className="project-description">{project?.description}</h1>
+                <h1 className="project-description">
+                    <strong>Description:</strong> {project?.description}
+                </h1>
+                <ButtonShadow path='https://zalo.me/0901430854' title='Contact now' icon={<FiInbox />} ></ButtonShadow>
             </SpotlightCard>
             <h1 className="divider uppercase text-4xl font-bold py-10">
-                Desktop View
+                <ShinyText
+                    text="DESKTOP VIEW"
+                    disabled={false}
+                    speed={3}
+                    className="custom-class mx-2"
+                />
             </h1>
             <SliderDesktop
                 images={project?.images || []}
@@ -52,7 +68,12 @@ const ProjectDetail: React.FC = () => {
                 link={project?.link}
             />
             <h1 className="divider uppercase text-4xl font-bold py-10">
-                Mobile View
+                <ShinyText
+                    text="Mobile View"
+                    disabled={false}
+                    speed={3}
+                    className="custom-class mx-2"
+                />
             </h1>
             <div className="p-5 flex justify-center">
                 <div className="mockup-phone border-dark-custom">

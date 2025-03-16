@@ -17,7 +17,7 @@ const Header = () => {
     ]
 
     return (
-        <nav className="w-[20rem] bg-dark-custom font-primary flex justify-around p-2 mt-5 rounded-lg top-10 z-[999] shadow-2xs">
+        <nav className="sticky w-[20rem] bg-dark-custom font-primary flex justify-around p-2 mt-5 rounded-lg top-10 z-[9999] shadow-2xs">
             {navItems.map(({ to, icon, label }) => (
                 <Link
                     key={to}

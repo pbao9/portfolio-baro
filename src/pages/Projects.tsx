@@ -117,8 +117,8 @@ const Projects = () => {
                         <TitleCenter title={'Tech stack'} />
                         <div className="my-3">
                             {project.tech && (
-                                <p className="flex flex-row items-center gap-4 my-3">
-                                    Backend:
+                                <div className="flex flex-row items-center gap-4 my-3">
+                                    <span>Backend:</span>
                                     <div className="flex flex-row gap-4">
                                         {project.tech.map((tech, idx) => (
                                             <img
@@ -130,11 +130,11 @@ const Projects = () => {
                                             />
                                         ))}
                                     </div>
-                                </p>
+                                </div>
                             )}
                             {project.cmsFrontend && (
-                                <p className="flex flex-row items-center gap-4 my-3">
-                                    Frontend:
+                                <div className="flex flex-row items-center gap-4 my-3">
+                                    <span>Frontend:</span>
                                     <div className="flex flex-row gap-4">
                                         {project.cmsFrontend.map(
                                             (tech, idx) => (
@@ -148,10 +148,10 @@ const Projects = () => {
                                             )
                                         )}
                                     </div>
-                                </p>
+                                </div>
                             )}
                             {project.appFrontend && (
-                                <p className="flex flex-row items-center gap-4 my-3">
+                                <div className="flex flex-row items-center gap-4 my-3">
                                     App Frontend:
                                     <div className="flex flex-row gap-4">
                                         {project.appFrontend.map(
@@ -166,7 +166,7 @@ const Projects = () => {
                                             )
                                         )}
                                     </div>
-                                </p>
+                                </div>
                             )}
                         </div>
                         <TitleCenter title={'Timeline'} />
@@ -192,7 +192,11 @@ const Projects = () => {
                 ))}
             </div>
             <div className="w-50 mx-auto my-3">
-                <ButtonShadow title={'View more'} path={'/projects-list'} icon={<MdOutlineArrowRightAlt />} />
+                <ButtonShadow
+                    title={'View more'}
+                    path={'/projects-list'}
+                    icon={<MdOutlineArrowRightAlt />}
+                />
             </div>
         </div>
     )
