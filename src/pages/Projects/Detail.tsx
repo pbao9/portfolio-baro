@@ -12,7 +12,7 @@ interface Project {
     price: number
     thumbnail: string
     images: string[]
-    link: string
+    link: string 
 }
 
 const ProjectDetail: React.FC = () => {

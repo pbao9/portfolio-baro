@@ -1,6 +1,10 @@
 @import 'tailwindcss';
 @plugin "daisyui";
 @import 'tailwindcss-animated';
+@import "swiper/css/pagination";
+@import "swiper/css/scrollbar";
+@import "swiper/css";
+@import "swiper/css/effect-coverflow";
 
 @theme {
     --font-inter: 'Inter', sans-serif;

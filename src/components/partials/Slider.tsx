@@ -1,16 +1,25 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Thumbs, Mousewheel } from 'swiper/modules'
-import { FiArrowDown, FiArrowLeft, FiArrowRight, FiArrowUp } from 'react-icons/fi'
+import {
+    FiArrowDown,
+    FiArrowLeft,
+    FiArrowRight,
+    FiArrowUp,
+} from 'react-icons/fi'
 import { Swiper as SwiperType } from 'swiper'
-import 'swiper/css'
 interface SliderProps {
     images: string[]
-    link: string
+    link: string | undefined 
     thumbsSwiper: SwiperType | null
     setThumbsSwiper: (swiper: SwiperType) => void
 }
 
-const Slider: React.FC<SliderProps> = ({ images, thumbsSwiper, setThumbsSwiper,link }) => {
+const Slider: React.FC<SliderProps> = ({
+    images,
+    thumbsSwiper,
+    setThumbsSwiper,
+    link,
+}) => {
     return (
         <div className="mockup-browser border border-base-300 w-full bg-dark-custom">
             <div className="mockup-browser-toolbar bg-black/30 py-3">
@@ -54,7 +63,10 @@ const Slider: React.FC<SliderProps> = ({ images, thumbsSwiper, setThumbsSwiper,l
                                         return (
                                             <SwiperSlide key={index}>
                                                 <div className="slider__image">
-                                                    <img src={image} alt={`Thumbnail ${index}`} />
+                                                    <img
+                                                        src={image}
+                                                        alt={`Thumbnail ${index}`}
+                                                    />
                                                 </div>
                                             </SwiperSlide>
                                         )
@@ -100,7 +112,10 @@ const Slider: React.FC<SliderProps> = ({ images, thumbsSwiper, setThumbsSwiper,l
                                     return (
                                         <SwiperSlide key={index}>
                                             <div className="slider__image">
-                                                <img src={image} alt={`Image ${index}`} />
+                                                <img
+                                                    src={image}
+                                                    alt={`Image ${index}`}
+                                                />
                                             </div>
                                         </SwiperSlide>
                                     )
