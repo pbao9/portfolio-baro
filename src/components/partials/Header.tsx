@@ -26,7 +26,7 @@ const Header = () => {
                         location.pathname === to ? 'bg-green-custom' : ''
                     }`}
                 >
-                    <div className="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-[-10px] group-hover:translate-y-[10px] text-xs text-white bg-dark-custom p-2 rounded transition-all duration-300">
+                    <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-[-10px] group-hover:translate-y-[10px] text-xs text-white bg-dark-custom p-2 rounded transition-all duration-300">
                         {label}
                     </div>
                     <div
