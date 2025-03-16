@@ -5,6 +5,7 @@ import CardPortfolio from '../components/CardPortfolio.tsx'
 import { Question } from '../components/Question.tsx'
 import { Collaborate } from '../components/Collaborate.tsx'
 import Squares from '../blocks/Backgrounds/Squares/Squares.tsx'
+import SplashCursor from '../blocks/Animations/SplashCursor/SplashCursor.tsx'
 const Master = () => {
 
     return (
@@ -26,6 +27,7 @@ const Master = () => {
                     <Footer />
                 </div>
                 <Squares />
+                <SplashCursor/>
             </div>
         </div>
     )

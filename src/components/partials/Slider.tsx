@@ -14,7 +14,7 @@ interface SliderProps {
     setThumbsSwiper: (swiper: SwiperType) => void
 }
 
-const Slider: React.FC<SliderProps> = ({
+const SliderDesktop: React.FC<SliderProps> = ({
     images,
     thumbsSwiper,
     setThumbsSwiper,
@@ -129,4 +129,4 @@ const Slider: React.FC<SliderProps> = ({
     )
 }
 
-export default Slider
+export default SliderDesktop
