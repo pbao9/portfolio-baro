@@ -7,6 +7,10 @@
             "thumbnail": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp",
             "duration": "1-3 days",
             "price": 500000,
+            "tech_stack": [
+                "/wordpress.svg",
+                "/php.svg"
+            ],
             "images": [
                 "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp",
                 "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742125619/screencapture-mediatemplate-local-gioi-thieu-2025-03-15-10_34_45_m4guir.webp",
@@ -25,6 +29,10 @@
             "thumbnail": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742042622/screencapture-localhost-sukienanphat-2025-03-15-19_26_22_epsztg.webp",
             "duration": "1-3 days",
             "price": 500000,
+            "tech_stack": [
+                "/wordpress.svg",
+                "/php.svg"
+            ],
             "images": [
                 "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742042622/screencapture-localhost-sukienanphat-2025-03-15-19_26_22_epsztg.webp",
                 "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742042623/screencapture-localhost-sukienanphat-gioi-thieu-2025-03-15-19_26_52_rup2ge.webp",
@@ -32,6 +40,25 @@
             ],
             "link": "https://example.com/ecommerce",
             "image_phone": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742042622/screencapture-localhost-sukienanphat-category-to-chuc-su-kien-chuyen-nghiep-2025-03-15-19_28_32_dos83s.webp"
+        },
+        {
+            "id": 3,
+            "title": "Shoes Store",
+            "description": "A full-featured e-commerce website with payment integration.",
+            "thumbnail": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742616216/screencapture-dashjk-vn-2025-03-22-10_57_41_ywzcbs.webp",
+            "duration": "1-3 days",
+            "price": 1500000,
+            "tech_stack": [
+                "/wordpress.svg",
+                "/php.svg"
+            ],
+            "images": [
+                "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742616216/screencapture-dashjk-vn-2025-03-22-10_57_41_ywzcbs.webp",
+                "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742616216/screencapture-dashjk-vn-san-pham-2025-03-22-10_57_59_caly41.webp",
+                "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742616215/screencapture-dashjk-vn-san-pham-giay-loafer-nam-gentle-den-2025-03-22-10_58_15_hojqon.webp"
+            ],
+            "link": "https://dashjk.vn/",
+            "image_phone": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742616216/screencapture-dashjk-vn-2025-03-22-10_57_41_ywzcbs.webp"
         }
     ]
 }

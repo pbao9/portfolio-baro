@@ -13,6 +13,7 @@ interface Project {
     description: string
     price: number
     thumbnail: string
+    tech_stack: string[]
     link: string
 }
 
@@ -52,7 +53,7 @@ const ProjectList = () => {
                 <title>Baro | Projects</title>
             </Helmet>
 
-            <div className='my-10'>
+            <div className="my-10">
                 <div className="text-center">
                     <ShinyText
                         text={'Projects'}
@@ -85,6 +86,18 @@ const ProjectList = () => {
                                               currency: 'VND',
                                           }).format(project.price)}
                                     💰
+                                </div>
+                                <div className="flex gap-3 py-3 mx-auto justify-center">
+                                    <h1 className="font-bold">Tech Stack:</h1>
+                                    {project.tech_stack.map((icon, index) => (
+                                        <img
+                                            key={index}
+                                            src={icon}
+                                            alt="tech stack icon"
+                                            width={30}
+                                            height={30}  
+                                        />
+                                    ))}
                                 </div>
                                 <div className="w-full mx-auto py-3">
                                     <ButtonShadow

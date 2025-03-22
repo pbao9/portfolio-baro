@@ -1,8 +1,6 @@
 import { Outlet } from 'react-router'
 import Header from '../../components/partials/Header'
 import Footer from '../../components/partials/Footer'
-import Squares from '../../blocks/Backgrounds/Squares/Squares'
-
 const MasterProject = () => {
     return (
         <div className="relative">
@@ -14,7 +12,6 @@ const MasterProject = () => {
                     </div>
                     <Footer />
                 </div>
-                <Squares />
             </div>
         </div>
     )

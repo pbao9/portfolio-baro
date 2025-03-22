@@ -4,7 +4,6 @@ import { Outlet } from 'react-router'
 import CardPortfolio from '../components/CardPortfolio.tsx'
 import { Question } from '../components/Question.tsx'
 import { Collaborate } from '../components/Collaborate.tsx'
-import Squares from '../blocks/Backgrounds/Squares/Squares.tsx'
 const Master = () => {
 
     return (
@@ -25,7 +24,6 @@ const Master = () => {
                     </div>
                     <Footer />
                 </div>
-                <Squares />
             </div>
         </div>
     )
