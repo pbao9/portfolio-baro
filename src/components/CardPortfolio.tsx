@@ -46,7 +46,7 @@ const CardPortfolio = () => {
             </p>
 
             <p className="text-white text-sm mt-1">
-                Web Developer HCM, Vietnam
+                Software Developer
             </p>
 
             <div
