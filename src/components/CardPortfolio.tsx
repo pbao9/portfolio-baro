@@ -4,24 +4,37 @@ import { MdOutlineAlternateEmail } from 'react-icons/md'
 import PixelTransition from '../blocks/Animations/PixelTransition/PixelTransition.tsx'
 import { Pulse } from './partials/Pulse.tsx'
 import ButtonShadow from './input/Button.tsx'
+import { useState } from 'react'
 
 const CardPortfolio = () => {
+    const [isImageLoaded, setIsImageLoaded] = useState(false)
+
+    const handleImageLoad = () => {
+        setIsImageLoaded(true)
+    }
+
     return (
-        <div className="shadow-lg p-6 w-full text-center block rounded-3xl mx-auto 
+        <div
+            className="shadow-lg p-6 w-full text-center block rounded-3xl mx-auto 
             bg-gradient-to-tl from-from-[#4F81BD] to-[#FFFFFF]/20
-            backdrop-blur-md relative overflow-hidden">
-                
+            backdrop-blur-md relative overflow-hidden"
+        >
             <div className="absolute inset-0 bg-white/10 opacity-10 rounded-3xl"></div>
             <PixelTransition
                 firstContent={
                     <img
                         src="https://res.cloudinary.com/dqtxna4oa/image/upload/v1743590900/anhdaidien_egkiou.jpg"
                         alt="Avatar"
+                        className={`w-full h-full object-cover ${
+                            isImageLoaded ? 'blur-0' : 'blur-2xl'
+                        }`}
+                        onLoad={handleImageLoad}
                         style={{
                             width: '100%',
                             height: '100%',
-                            objectPosition:'top center',
+                            objectPosition: 'top center',
                             objectFit: 'cover',
+                            transition: 'filter 0.3s ease-out',
                         }}
                     />
                 }
@@ -30,10 +43,15 @@ const CardPortfolio = () => {
                         <img
                             src="https://res.cloudinary.com/dqtxna4oa/image/upload/v1743591280/Frame_809_itd2kb.png"
                             alt="Avatar"
+                            className={`w-full h-full object-cover ${
+                                isImageLoaded ? 'blur-0' : 'blur-2xl'
+                            }`}
+                            onLoad={handleImageLoad}
                             style={{
                                 width: '100%',
                                 height: '100%',
                                 objectFit: 'cover',
+                                transition: 'filter 0.3s ease-out',
                             }}
                         />
                     </div>
@@ -46,13 +64,9 @@ const CardPortfolio = () => {
             <h1 className="text-4xl font-semibold text-white mt-4">
                 Baro Pham
             </h1>
-            <p className="text-white text-sm mt-1 uppercase font-bold">
-                Devro
-            </p>
+            <p className="text-white text-sm mt-1 uppercase font-bold">Devro</p>
 
-            <p className="text-white text-sm mt-1">
-                Software Developer
-            </p>
+            <p className="text-white text-sm mt-1">Software Developer</p>
 
             <div
                 id="social"
