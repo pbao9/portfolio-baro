@@ -7,16 +7,16 @@ import { MdOutlineArrowRightAlt } from 'react-icons/md'
 
 const projects = [
     {
-        title: 'Project BuzzMart API/Admin/User 🛒',
+        title: 'Project Bithardware API/Admin/User 🛒',
         description: ['Updating...', ''],
-        tech: ['nodejs', 'express', 'MySQL'],
+        tech: ['laravel', 'MySQL'],
         cmsFrontend: ['ReactJS', 'Tailwind', 'NextJS'],
         appFrontend: ['ReactJS', 'Expo', 'Paper-logo'],
         link: [
-            'https://gitlab.com/pbao9/backendbuzzmart',
-            'https://gitlab.com/pbao9/frontendbuzzmart',
+            'https://gitlab.com/pbao9/bithardware',
+            'https://gitlab.com/pbao9/febithardware',
         ],
-        date: 'onready',
+        date: '22/03/2024 - Pending',
     },
     {
         title: 'TOEIC Mastery Course 🎯',

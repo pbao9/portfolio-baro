@@ -8,7 +8,7 @@ const Master = () => {
 
     return (
         <div className="relative">
-            <div className="bg-black opacity-90 min-h-screen text-white font-outfit w-full relative">
+            <div className="bg-[#030303] opacity-90 min-h-screen text-white font-outfit w-full relative">
                 <div className="flex flex-col justify-center items-center max-w-[1190px] mx-auto">
                     <Header />
                     <div className="relative z-[999] flex flex-wrap lg:flex-nowrap justify-center max-w-full px-4 md:px-10 py-10">
