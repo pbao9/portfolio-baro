@@ -119,3 +119,8 @@ html {
     transform: translate(2px, 2px);
     animation: glitch2 0.5s infinite alternate;
 }
+
+
+html {
+    scroll-behavior: smooth;
+}

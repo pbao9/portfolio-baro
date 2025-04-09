@@ -5,6 +5,7 @@ import PixelTransition from '../blocks/Animations/PixelTransition/PixelTransitio
 import { Pulse } from './partials/Pulse.tsx'
 import ButtonShadow from './input/Button.tsx'
 import { useState } from 'react'
+import { TbFileCv } from "react-icons/tb";
 
 const CardPortfolio = () => {
     const [isImageLoaded, setIsImageLoaded] = useState(false)
@@ -66,7 +67,7 @@ const CardPortfolio = () => {
             </h1>
             <p className="text-white text-sm mt-1 uppercase font-bold">Devro</p>
 
-            <p className="text-white text-sm mt-1">Software Developer</p>
+            <p className="text-white text-sm mt-1">Back-End Developer / Data Engineer</p>
 
             <div
                 id="social"
@@ -119,8 +120,12 @@ const CardPortfolio = () => {
             </div>
             <Pulse />
             <ButtonShadow
-                title="Let's talk"
-                path={'mailto:pbao.business@gmail.com'}
+                target="_blank"
+                title="View my Resume"
+                path={
+                    'https://drive.google.com/file/d/1vgcB-O1UUgwdAOIuNMVsXd9A1gFnOwxU/view?usp=sharing'
+                }
+                icon={<TbFileCv />}
             />
         </div>
     )

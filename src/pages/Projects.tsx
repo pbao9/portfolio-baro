@@ -7,19 +7,14 @@ import { MdOutlineArrowRightAlt } from 'react-icons/md'
 
 const projects = [
     {
-        title: 'Project Bithardware API/Admin/User 🛒',
+        title: 'Project Devro API/Admin/User 🛒',
         description: ['Updating...', ''],
-        tech: ['laravel', 'MySQL'],
-        cmsFrontend: ['ReactJS', 'Tailwind', 'NextJS'],
-        appFrontend: ['ReactJS', 'Expo', 'Paper-logo'],
-        link: [
-            'https://gitlab.com/pbao9/bithardware',
-            'https://gitlab.com/pbao9/febithardware',
-        ],
-        date: '22/03/2024 - Pending',
+        tech: ['laravel', 'MySQL', 'Livewire', 'Tailwind'],
+        link: ['https://gitlab.com/pbao9/devrocore'],
+        date: '01/04/2024 - Present',
     },
     {
-        title: 'TOEIC Mastery Course 🎯',
+        title: 'TOEIC Mastery Course',
         description: [
             'Enhance your English skills and boost your TOEIC score with our expertly crafted course.',
             'Includes practice tests, real-world scenarios, and personalized feedback to ensure success.',
@@ -73,6 +68,26 @@ const projects = [
         tech: ['Laravel', 'Postman', 'MySQL'],
         link: 'https://github.com/pbao9/Lafresh-Ecommerce',
         date: '01/2024 - 04/2024',
+    },
+    {
+        title: 'Project Booking Car to School for Kid 🌟',
+        description: [
+            'The project is a web application designed to facilitate the booking of cars for school transportation services. It includes features for both parents and drivers, allowing parents to book rides for their children and drivers to manage their schedules.',
+            'The application is built using Laravel and MySQL, ensuring a robust backend for data management.',
+        ],
+        tech: ['Laravel', 'Bootstrap', 'MySQL'],
+        link: 'http://babi2school.com.vn/',
+        date: '01/2024 - 03/2024',
+    },
+    {
+        title: 'Project VietHouse Phu My Hung Rentals 🏢',
+        description: [
+            'VietHouse Phu My Hung Rentals is a real estate rental project offering high-quality apartments and office spaces in the Phu My Hung urban area, Ho Chi Minh City.',
+            'The platform connects tenants with trusted listings, focusing on comfort, convenience, and expat- friendly living.',
+        ],
+        tech: ['Laravel', 'Bootstrap', 'MySQL'],
+        link: 'https://viethousephumyhung.com/',
+        date: '11/2023 - 01/2024',
     },
 ]
 
@@ -180,12 +195,14 @@ const Projects = () => {
                                       key={idx}
                                       title={`Link ${idx + 1}`}
                                       path={link}
+                                      target="_blank"
                                   />
                               ))
                             : project.link && (
                                   <ButtonShadow
                                       title={'Link Demo'}
                                       path={project.link}
+                                      target="_blank"
                                   />
                               )}
                     </SpotlightCard>
