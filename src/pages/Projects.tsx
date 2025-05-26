@@ -7,11 +7,21 @@ import { MdOutlineArrowRightAlt } from 'react-icons/md'
 
 const projects = [
     {
-        title: 'Project Devro API/Admin/User 🛒',
-        description: ['Updating...', ''],
-        tech: ['laravel', 'MySQL', 'Livewire', 'Tailwind'],
-        link: ['https://gitlab.com/pbao9/devrocore'],
-        date: '01/04/2024 - Present',
+        title: 'Project Ecommerce Payment Pi Wallet',
+        description: ['Updating..'],
+        tech: ['Laravel', 'NodeJS', 'MySQL', 'Livewire', 'Tailwind'],
+        link: '',
+        date: 'Ready to start..',
+    },
+    {
+        title: 'Project Devro Admin/User 🛒',
+        description: [
+            'Simple e-commerce platform with integrated VNPay payment gateway',
+            'Features Telegram notifications for successful payments and new user registrations',
+        ],
+        tech: ['Laravel', 'MySQL', 'Livewire', 'Tailwind'],
+        link: 'https://demo.baro-dev.io.vn/',
+        date: '01/04/2024 - 20/04/2024',
     },
     {
         title: 'TOEIC Mastery Course',
