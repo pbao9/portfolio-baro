@@ -11,7 +11,7 @@ const Master = () => {
     return (
         <div>
             <MouseFollower />
-             <SmoothScroll />
+            <SmoothScroll />
             <div className="relative">
                 <div className="opacity-90 min-h-screen text-white font-outfit w-full relative z-1">
                     <div className="flex flex-col justify-center items-center max-w-[1190px] mx-auto">
