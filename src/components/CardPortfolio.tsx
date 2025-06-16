@@ -3,9 +3,7 @@ import { FaGithub, FaLinkedin, FaGitlab } from 'react-icons/fa6'
 import { MdOutlineAlternateEmail } from 'react-icons/md'
 import PixelTransition from '../blocks/Animations/PixelTransition/PixelTransition.tsx'
 import { Pulse } from './partials/Pulse.tsx'
-import ButtonShadow from './input/Button.tsx'
 import { useState } from 'react'
-import { TbFileCv } from "react-icons/tb";
 
 const CardPortfolio = () => {
     const [isImageLoaded, setIsImageLoaded] = useState(false)
@@ -17,14 +15,13 @@ const CardPortfolio = () => {
     return (
         <div
             className="shadow-lg p-6 w-full text-center block rounded-3xl mx-auto 
-            bg-gradient-to-tl from-from-[#4F81BD] to-[#FFFFFF]/20
+            bg-[#000]/60
             backdrop-blur-md relative overflow-hidden"
         >
-            <div className="absolute inset-0 bg-white/10 opacity-10 rounded-3xl"></div>
             <PixelTransition
                 firstContent={
                     <img
-                        src="https://res.cloudinary.com/dqtxna4oa/image/upload/v1743590900/anhdaidien_egkiou.jpg"
+                        src="https://res.cloudinary.com/dqtxna4oa/image/upload/v1750086248/avatar-3_s9pgae.png"
                         alt="Avatar"
                         className={`w-full h-full object-cover ${
                             isImageLoaded ? 'blur-0' : 'blur-2xl'
@@ -33,7 +30,8 @@ const CardPortfolio = () => {
                         style={{
                             width: '100%',
                             height: '100%',
-                            objectPosition: 'top center',
+                            objectPosition: '45% 85%',
+                            scale: '1.5',
                             objectFit: 'cover',
                             transition: 'filter 0.3s ease-out',
                         }}
@@ -42,7 +40,7 @@ const CardPortfolio = () => {
                 secondContent={
                     <div>
                         <img
-                            src="https://res.cloudinary.com/dqtxna4oa/image/upload/v1743591280/Frame_809_itd2kb.png"
+                            src="https://res.cloudinary.com/dqtxna4oa/image/upload/v1750085951/Logo_jodsvn.jpg"
                             alt="Avatar"
                             className={`w-full h-full object-cover ${
                                 isImageLoaded ? 'blur-0' : 'blur-2xl'
@@ -60,14 +58,14 @@ const CardPortfolio = () => {
                 gridSize={30}
                 pixelColor="#ffffff"
                 animationStepDuration={0.4}
-                className="shadow-green-custom border-green-custom hover:shadow-[0_0_20px_5px_rgba(0,255,0,0.7)] hover:border-white transition-all duration-500"
+                className="shadow-green-custom border-green-custom hover:shadow-[0_0_20px_5px_rgba(0,255,0,0.7)] hover:border-white transition-all duration-500 cursor-pointer"
             />
             <h1 className="text-4xl font-semibold text-white mt-4">
                 Baro Pham
             </h1>
-            <p className="text-white text-sm mt-1 uppercase font-bold">Devro</p>
+            <a href='https://devro-tech.com/' className="text-white text-sm mt-1 uppercase font-bold">Devro Tech</a>
 
-            <p className="text-white text-sm mt-1">Back-End Developer / Data Engineer</p>
+            <p className="text-white text-sm mt-1">Full Stack Developer / Data Engineer</p>
 
             <div
                 id="social"
@@ -119,14 +117,14 @@ const CardPortfolio = () => {
                 </Link>
             </div>
             <Pulse />
-            <ButtonShadow
+            {/* <ButtonShadow
                 target="_blank"
                 title="View my Resume"
                 path={
                     'https://drive.google.com/file/d/1vgcB-O1UUgwdAOIuNMVsXd9A1gFnOwxU/view?usp=sharing'
                 }
                 icon={<TbFileCv />}
-            />
+            /> */}
         </div>
     )
 }

@@ -4,11 +4,11 @@ import {Link} from "react-router";
 export const Collaborate = () => {
     return (
         <Link to={"/contact"}>
-            <div className='group cursor-pointer animate-fade-down flex flex-row items-start relative bg-dark-custom hover:bg-green-custom w-full rounded-lg p-3 transition transition-all duration-500 my-[5rem]'>
+            <div className='group cursor-pointer animate-fade-down flex flex-row items-start relative bg-dark-custom hover:bg-green-custom w-full rounded-lg p-3 transition-all duration-500 my-[5rem]'>
                 <div>
                     <h1 className='font-bold text-4xl sm:text-5xl md:text-6xl my-5'>
                         Let's<br/>
-                        <span className='text-green-custom group-hover:text-white transition transition-all duration-500'>
+                        <span className='text-green-custom group-hover:text-white transition-all duration-500'>
                         collaborate
                 </span>
                     </h1>
@@ -26,7 +26,7 @@ export const Collaborate = () => {
 
                     <HiOutlineArrowLongRight
                         size={26}
-                        className="text-dark-custom opacity-0 -rotate-45 -translate-x-6 translate-y-0 group-hover:translate-x-0 opacity-100 group-hover:-translate-y-6 absolute transition-all duration-300"
+                        className="text-dark-custom -rotate-45 -translate-x-6 translate-y-0 group-hover:translate-x-0 opacity-100 group-hover:-translate-y-6 absolute transition-all duration-300"
                     />
                 </div>
 

@@ -11,6 +11,7 @@ import NotFound from './pages/NotFound.tsx'
 import MasterProject from './pages/Projects/Master.tsx'
 import ProjectList from './pages/Projects/Index.tsx'
 import ProjectDetail from './pages/Projects/Detail.tsx'
+import { TGSExp } from './pages/Experiece/TGSExp.tsx'
 
 function App() {
     return (
@@ -25,6 +26,10 @@ function App() {
                     <Route
                         path={'/experience/mevivu'}
                         element={<MevivuExp />}
+                    />
+                    <Route
+                        path={'/experience/tgs'}
+                        element={<TGSExp />}
                     />
                     <Route path="*" element={<NotFound />} />
                 </Route>

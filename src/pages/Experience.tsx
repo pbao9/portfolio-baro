@@ -10,7 +10,7 @@ export const Experience = () => {
             </Helmet>
             <div className="w-full animate-fade-down">
                 <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl my-5">
-                    Over 1 Years of
+                    Over 2 Years of
                     <br /> Develop
                     <ShinyText
                         text="Expertise"
@@ -22,6 +22,16 @@ export const Experience = () => {
             </div>
 
             <div>
+                <CardCustom
+                    title={'DIGIWORLD TECH SOLUTIONS JSC'}
+                    desc={
+                        'Developed and maintained WHMCS-based hosting platforms, and upgraded web applications using Laravel, WordPress, and CodeIgniter.' +
+                        ' Collaborated cross-functionally with departments to fulfill assigned tasks while also taking on Business Analyst and Web Project Manager roles within the company.'
+                    }
+                    link={'/experience/tgs'}
+                    date={'17/04/2025 - Current'}
+                />
+
                 <CardCustom
                     title={'Mevivu Technology'}
                     desc={

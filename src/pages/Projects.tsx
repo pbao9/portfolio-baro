@@ -7,14 +7,7 @@ import { MdOutlineArrowRightAlt } from 'react-icons/md'
 
 const projects = [
     {
-        title: 'Project Ecommerce Payment Pi Wallet',
-        description: ['Updating..'],
-        tech: ['Laravel', 'NodeJS', 'MySQL', 'Livewire', 'Tailwind'],
-        link: '',
-        date: 'Ready to start..',
-    },
-    {
-        title: 'Project Devro Admin/User 🛒',
+        title: 'Project Devro Admin/User',
         description: [
             'Simple e-commerce platform with integrated VNPay payment gateway',
             'Features Telegram notifications for successful payments and new user registrations',
@@ -35,7 +28,7 @@ const projects = [
         date: '12/02/2025 - 12/02/2025',
     },
     {
-        title: 'Project Ecommerce API/Admin/User 🛒',
+        title: 'Project Ecommerce API/Admin/User',
         description: [
             'A comprehensive eCommerce solution designed to provide seamless online shopping experiences.',
             'Includes a powerful API, an intuitive admin dashboard, and a user-friendly storefront.',
@@ -48,7 +41,7 @@ const projects = [
         date: '28/01/2025 - 12/02/2025',
     },
     {
-        title: 'Project VisonLand API/Admin 🛸',
+        title: 'Project VisonLand API/Admin',
         description: [
             'Developed an API and Admin CMS for real estate postings. Implemented payment functions for direct and indirect commissions using in-app currency, with logic for commission calculations based on referral codes.',
             'Optimized database queries with Eloquent ORM for better performance.',
@@ -59,7 +52,7 @@ const projects = [
         date: '09/2024 - 11/2024',
     },
     {
-        title: 'Project Fishing Booking API/Admin 🌟',
+        title: 'Project Fishing Booking API/Admin',
         description: [
             'Developed an API and Admin CMS for managing fishing spots. Introduced an event feature allowing lower-rank players to earn rewards and commissions through referral codes.',
             'Streamlined commission transfers to app and bank accounts with admin approval for better financial management.',
@@ -69,7 +62,7 @@ const projects = [
         date: '06/2024 - 09/2024',
     },
     {
-        title: 'Project Lafresh Ecommerce 🌟',
+        title: 'Project Lafresh Ecommerce',
         description: [
             'The Lafresh project is an eCommerce website specializing in selling bottled and packaged water',
             'The platform includes a unique promotional system where customers receive bonus products based on product categories (Bottle/Pack)',
@@ -80,7 +73,7 @@ const projects = [
         date: '01/2024 - 04/2024',
     },
     {
-        title: 'Project Booking Car to School for Kid 🌟',
+        title: 'Project Booking Car to School for Kid',
         description: [
             'The project is a web application designed to facilitate the booking of cars for school transportation services. It includes features for both parents and drivers, allowing parents to book rides for their children and drivers to manage their schedules.',
             'The application is built using Laravel and MySQL, ensuring a robust backend for data management.',
@@ -90,7 +83,7 @@ const projects = [
         date: '01/2024 - 03/2024',
     },
     {
-        title: 'Project VietHouse Phu My Hung Rentals 🏢',
+        title: 'Project VietHouse Phu My Hung Rentals',
         description: [
             'VietHouse Phu My Hung Rentals is a real estate rental project offering high-quality apartments and office spaces in the Phu My Hung urban area, Ho Chi Minh City.',
             'The platform connects tenants with trusted listings, focusing on comfort, convenience, and expat- friendly living.',

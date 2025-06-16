@@ -88,6 +88,15 @@ function TechStack() {
                 <div  className='p-5 rounded-2xl mx-3'>
                     <img src='/swagger.svg' alt='swagger' width={60} height={60} className='mx-auto' />
                 </div>
+                <div  className='p-5 rounded-2xl mx-3'>
+                    <img src='/codeigniter.svg' alt='codeigniter' width={60} height={60} className='mx-auto' />
+                </div>
+                 <div  className='p-5 rounded-2xl mx-3'>
+                    <img src='/magento-icon.svg' alt='magento-icon' width={60} height={60} className='mx-auto' />
+                </div>
+                 <div  className='p-5 rounded-2xl mx-3'>
+                    <img src='/redis.svg' alt='redis' width={60} height={60} className='mx-auto' />
+                </div>
             </Slider>
         </div>
     )
