@@ -3,7 +3,6 @@ import SpotlightCard from '../blocks/Components/SpotlightCard/SpotlightCard'
 import ButtonShadow from '../components/input/Button'
 import ShinyText from '../blocks/TextAnimations/ShinyText/ShinyText'
 import { TitleCenter } from '../components/partials/TitleCenter'
-import { MdOutlineArrowRightAlt } from 'react-icons/md'
 
 const projects = [
     {
