@@ -101,7 +101,7 @@ const Projects = () => {
                 <title>Baro | Projects</title>
             </Helmet>
 
-            <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl mb-5">
+            <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl mb-5 theme-text">
                 Recent Projects and
                 <ShinyText
                     text="Achievements"
@@ -118,10 +118,10 @@ const Projects = () => {
                         className="custom-spotlight-card"
                         spotlightColor="rgba(0, 229, 255, 0.2)"
                     >
-                        <h1 className="font-semibold text-xl sm:text-2xl mb-5">
+                        <h1 className="font-semibold text-xl sm:text-2xl mb-5 theme-text">
                             {project.title || 'No title available'}
                         </h1>
-                        <ul className="mb-3 text-sm sm:text-base">
+                        <ul className="mb-3 text-sm sm:text-base theme-text-secondary">
                             {project.description?.length > 0 ? (
                                 project.description.map((desc, idx) => (
                                     <li key={idx} className="mb-2">
@@ -136,7 +136,7 @@ const Projects = () => {
                         <div className="my-3">
                             {project.tech && (
                                 <div className="flex flex-row items-center gap-4 my-3">
-                                    <span>Backend:</span>
+                                    <span className="theme-text">Backend:</span>
                                     <div className="flex flex-row gap-4">
                                         {project.tech.map((tech, idx) => (
                                             <img
@@ -152,7 +152,7 @@ const Projects = () => {
                             )}
                             {project.cmsFrontend && (
                                 <div className="flex flex-row items-center gap-4 my-3">
-                                    <span>Frontend:</span>
+                                    <span className="theme-text">Frontend:</span>
                                     <div className="flex flex-row gap-4">
                                         {project.cmsFrontend.map(
                                             (tech, idx) => (
@@ -170,7 +170,7 @@ const Projects = () => {
                             )}
                             {project.appFrontend && (
                                 <div className="flex flex-row items-center gap-4 my-3">
-                                    App Frontend:
+                                    <span className="theme-text">App Frontend:</span>
                                     <div className="flex flex-row gap-4">
                                         {project.appFrontend.map(
                                             (tech, idx) => (
@@ -188,7 +188,7 @@ const Projects = () => {
                             )}
                         </div>
                         <TitleCenter title={'Timeline'} />
-                        <p className="flex items-center gap-2 text-white my-3">
+                        <p className="flex items-center gap-2 theme-text my-3">
                             Duration: {project.date || 'No date available'}
                         </p>
 
@@ -211,13 +211,13 @@ const Projects = () => {
                     </SpotlightCard>
                 ))}
             </div>
-            <div className="w-50 mx-auto my-3">
+            {/* <div className="w-50 mx-auto my-3">
                 <ButtonShadow
                     title={'View more'}
                     path={'/projects-list'}
                     icon={<MdOutlineArrowRightAlt />}
                 />
-            </div>
+            </div> */}
         </div>
     )
 }

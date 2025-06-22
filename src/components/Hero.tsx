@@ -5,8 +5,8 @@ import Hyperlink from './input/Hyperlink'
 
 const Hero = () => {
     return (
-        <div className="w-full animate-fade-down">
-            <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl my-5">
+        <div className="w-full animate-fade-down theme-text">
+            <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl my-5 theme-text">
                 Transforming Your
                 <br /> Ideas into
                 <ShinyText
@@ -16,7 +16,7 @@ const Hero = () => {
                     className="custom-class mx-2"
                 />
             </h1>
-            <span>
+            <span className="theme-text-secondary">
                 Passionate about creating intuitive and engaging user
                 experiences. <br />
                 Specialize in transforming ideas into beautifully crafted
@@ -26,51 +26,51 @@ const Hero = () => {
             <div className="flex flex-row my-2 justify-between sm:justify-between md:justify-baseline lg:justify-baseline xl:justify-start">
                 <div className="w-1/4 text-start">
                     <div className="flex flex-row justify-start text-5xl items-center">
-                        <h3>+</h3>
+                        <h3 className="theme-text">+</h3>
                         <CountUp
                             from={100}
                             to={2}
                             separator=","
                             direction="up"
                             duration={1}
-                            className="count-up-text"
+                            className="count-up-text theme-text"
                         />
                     </div>
-                    <h3 className="fw-bold text-sm">
+                    <h3 className="fw-bold text-sm theme-text-secondary">
                         YEARS OF <br />
                         EXPERIENCE
                     </h3>
                 </div>
                 <div className="w-1/4 text-start">
                     <div className="flex flex-row justify-start text-5xl items-center">
-                        <h3>+</h3>
+                        <h3 className="theme-text">+</h3>
                         <CountUp
                             from={100}
                             to={35}
                             separator=","
                             direction="up"
                             duration={1}
-                            className="count-up-text"
+                            className="count-up-text theme-text"
                         />
                     </div>
-                    <h3 className="fw-bold text-sm">
+                    <h3 className="fw-bold text-sm theme-text-secondary">
                         PROJECTS
                         <br /> COMPLETED
                     </h3>
                 </div>
                 <div className="w-1/4 text-start">
                     <div className="flex flex-row justify-start text-5xl items-center">
-                        <h3>+</h3>
+                        <h3 className="theme-text">+</h3>
                         <CountUp
                             from={100}
                             to={5}
                             separator=","
                             direction="up"
                             duration={1}
-                            className="count-up-text"
+                            className="count-up-text theme-text"
                         />
                     </div>
-                    <h3 className="fw-bold text-sm">
+                    <h3 className="fw-bold text-sm theme-text-secondary">
                         WORLDWIDE
                         <br /> CLIENT
                     </h3>

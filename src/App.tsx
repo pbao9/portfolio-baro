@@ -12,10 +12,11 @@ import MasterProject from './pages/Projects/Master.tsx'
 import ProjectList from './pages/Projects/Index.tsx'
 import ProjectDetail from './pages/Projects/Detail.tsx'
 import { TGSExp } from './pages/Experiece/TGSExp.tsx'
+import { ThemeProvider } from './contexts/ThemeContext'
 
 function App() {
     return (
-        <>
+        <ThemeProvider>
             <Routes>
                 <Route path="/" element={<Master />}>
                     <Route index element={<Home />} />
@@ -38,7 +39,7 @@ function App() {
                     <Route path={'view/:id'} element={<ProjectDetail />} />
                 </Route>
             </Routes>
-        </>
+        </ThemeProvider>
     )
 }
 

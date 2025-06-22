@@ -14,8 +14,7 @@ const CardPortfolio = () => {
 
     return (
         <div
-            className="shadow-lg p-6 w-full text-center block rounded-3xl mx-auto 
-            bg-[#000]/60
+            className="theme-shadow theme-card p-6 w-full text-center block rounded-3xl mx-auto 
             backdrop-blur-md relative overflow-hidden"
         >
             <PixelTransition
@@ -56,16 +55,16 @@ const CardPortfolio = () => {
                     </div>
                 }
                 gridSize={30}
-                pixelColor="#ffffff"
+                pixelColor="var(--theme-text)"
                 animationStepDuration={0.4}
-                className="shadow-green-custom border-green-custom hover:shadow-[0_0_20px_5px_rgba(0,255,0,0.7)] hover:border-white transition-all duration-500 cursor-pointer"
+                className="theme-border hover:theme-shadow-hover hover:border-green-custom transition-all duration-500 cursor-pointer border"
             />
-            <h1 className="text-4xl font-semibold text-white mt-4">
+            <h1 className="text-4xl font-semibold theme-text mt-4">
                 Baro Pham
             </h1>
-            <a href='https://devro-tech.com/' className="text-white text-sm mt-1 uppercase font-bold">Devro Tech</a>
+            <a href='https://devro-tech.com/' className="theme-text text-sm mt-1 uppercase font-bold">Devro Tech</a>
 
-            <p className="text-white text-sm mt-1">Full Stack Developer / Data Engineer</p>
+            <p className="theme-text-secondary text-sm mt-1">Back-End Developer</p>
 
             <div
                 id="social"

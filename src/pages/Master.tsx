@@ -4,16 +4,17 @@ import { Outlet } from 'react-router'
 import CardPortfolio from '../components/CardPortfolio.tsx'
 import { Question } from '../components/Question.tsx'
 import { Collaborate } from '../components/Collaborate.tsx'
-import Squares from '../blocks/Backgrounds/Squares/Squares.tsx'
 import { MouseFollower } from '../components/MouseFollower.tsx'
 import { SmoothScroll } from '../components/SmoothScroll.tsx'
+import FixedThemeToggle from '../components/FixedThemeToggle.tsx'
+
 const Master = () => {
     return (
         <div>
             <MouseFollower />
             <SmoothScroll />
             <div className="relative">
-                <div className="opacity-90 min-h-screen text-white font-outfit w-full relative z-1">
+                <div className="theme-bg theme-text opacity-90 min-h-screen font-outfit w-full relative z-1">
                     <div className="flex flex-col justify-center items-center max-w-[1190px] mx-auto">
                         <Header />
                         <div className="relative z-[999] flex flex-wrap lg:flex-nowrap justify-center max-w-full px-4 md:px-10 py-10">
@@ -30,15 +31,8 @@ const Master = () => {
                     </div>
                 </div>
             </div>
-            <div className="fixed inset-0 -z-10 h-screen w-screen">
-                <Squares
-                    speed={0.5}
-                    squareSize={40}
-                    direction="diagonal"
-                    borderColor="#fff"
-                    hoverFillColor="#222"
-                />
-            </div>
+            <FixedThemeToggle />
+           
         </div>
     )
 }

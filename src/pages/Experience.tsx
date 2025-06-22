@@ -9,7 +9,7 @@ export const Experience = () => {
                 <title>Baro | Experience</title>
             </Helmet>
             <div className="w-full animate-fade-down">
-                <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl my-5">
+                <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl my-5 theme-text">
                     Over 2 Years of
                     <br /> Develop
                     <ShinyText
@@ -21,7 +21,7 @@ export const Experience = () => {
                 </h1>
             </div>
 
-            <div>
+            <div className="space-y-8">
                 <CardCustom
                     title={'DIGIWORLD TECH SOLUTIONS JSC'}
                     desc={
@@ -31,7 +31,7 @@ export const Experience = () => {
                     link={'/experience/tgs'}
                     date={'17/04/2025 - Current'}
                 />
-
+                
                 <CardCustom
                     title={'Mevivu Technology'}
                     desc={

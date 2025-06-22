@@ -32,7 +32,7 @@ export const Question = () => {
     return (
         <>
             <div className='animate-fade-down'>
-                <h1 className='font-bold text-4xl sm:text-5xl md:text-6xl my-5'>
+                <h1 className='font-bold text-4xl sm:text-5xl md:text-6xl my-5 theme-text'>
                     Frequently <br/>
                     Asked
                     <ShinyText
@@ -40,15 +40,14 @@ export const Question = () => {
                         disabled={false}
                         speed={3}
                         className="custom-class mx-2"
-
                     />
                 </h1>
 
                 {questions.map((item, index) => (
-                    <div key={index} className="collapse collapse-arrow bg-dark-custom mb-3">
+                    <div key={index} className="collapse collapse-arrow theme-card mb-3">
                         <input type="radio" name="faq-accordion" />
-                        <div className="collapse-title text-xl font-medium">{item.question}</div>
-                        <div className="collapse-content">
+                        <div className="collapse-title text-xl font-medium theme-text">{item.question}</div>
+                        <div className="collapse-content theme-text-secondary">
                             <p>{item.answer}</p>
                         </div>
                     </div>
