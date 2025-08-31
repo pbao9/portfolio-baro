@@ -6,7 +6,6 @@ import { Question } from '../components/Question.tsx'
 import { Collaborate } from '../components/Collaborate.tsx'
 import { MouseFollower } from '../components/MouseFollower.tsx'
 import { SmoothScroll } from '../components/SmoothScroll.tsx'
-import FixedThemeToggle from '../components/FixedThemeToggle.tsx'
 
 const Master = () => {
     return (
@@ -30,9 +29,7 @@ const Master = () => {
                         <Footer />
                     </div>
                 </div>
-            </div>
-            <FixedThemeToggle />
-           
+            </div>           
         </div>
     )
 }

@@ -20,7 +20,7 @@ const CardPortfolio = () => {
             <PixelTransition
                 firstContent={
                     <img
-                        src="https://res.cloudinary.com/dqtxna4oa/image/upload/v1750085951/Logo_jodsvn.jpg"
+                        src="https://res.cloudinary.com/dqtxna4oa/image/upload/v1756613336/Generated_Image_August_30_2025_-_4_41PM_wcz7bb.jpg"
                         alt="Avatar"
                         className={`w-full h-full object-cover ${
                             isImageLoaded ? 'blur-0' : 'blur-2xl'
@@ -29,7 +29,7 @@ const CardPortfolio = () => {
                         style={{
                             width: '100%',
                             height: '100%',
-                            objectPosition: '45% 85%',
+                            objectPosition: '0% 0%',
                             scale: '1.5',
                             objectFit: 'cover',
                             transition: 'filter 0.3s ease-out',
