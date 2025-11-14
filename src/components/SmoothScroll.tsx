@@ -8,6 +8,9 @@ export const SmoothScroll = () => {
       lerp: 0.08,
     })
 
+    // Expose Lenis instance to window for use in other components
+    ;(window as any).lenis = lenis
+
     function raf(time: number) {
       lenis.raf(time)
       requestAnimationFrame(raf)
@@ -17,6 +20,7 @@ export const SmoothScroll = () => {
 
     return () => {
       lenis.destroy()
+      delete (window as any).lenis
     }
   }, [])
 
