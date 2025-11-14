@@ -17,7 +17,7 @@ const Header = () => {
     ]
 
     return (
-        <nav className="sticky w-[20rem] bg-white/10 dark:bg-black/20 backdrop-blur-xl border border-white/20 dark:border-white/10 font-primary flex justify-around p-3 mt-5 rounded-2xl top-10 z-[9999] shadow-2xl shadow-black/10">
+        <nav className="sticky w-[20rem] bg-black/20 backdrop-blur-xl border border-white/10 font-primary flex justify-around p-3 mt-5 rounded-2xl top-10 z-[9999] shadow-2xl shadow-black/10">
             {navItems.map(({ to, icon, label }) => (
                 <Link
                     key={to}
@@ -27,7 +27,7 @@ const Header = () => {
                     }`}
                 >
                     {/* Glass overlay on hover */}
-                    <div className="absolute inset-0 bg-white/5 dark:bg-white/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-white/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     
                     {/* Tooltip */}
                     <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-[-10px] group-hover:translate-y-[10px] text-xs text-white bg-black/80 backdrop-blur-md p-2 rounded-lg transition-all duration-300 whitespace-nowrap">

@@ -2,7 +2,6 @@ import { Outlet } from 'react-router'
 import Header from '../../components/partials/Header'
 import Footer from '../../components/partials/Footer'
 import Squares from '../../blocks/Backgrounds/Squares/Squares'
-import FixedThemeToggle from '../../components/FixedThemeToggle.tsx'
 
 const MasterProject = () => {
     return (
@@ -25,7 +24,6 @@ const MasterProject = () => {
                 borderColor="var(--theme-border)"
                 hoverFillColor="var(--theme-hover)"
             />
-            <FixedThemeToggle />
         </>
     )
 }

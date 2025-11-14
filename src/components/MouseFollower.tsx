@@ -1,8 +1,6 @@
 import { useEffect, useRef } from 'react'
-import { useTheme } from '../contexts/ThemeContext'
 
 export const MouseFollower = () => {
-  const { theme } = useTheme()
   const dotRef = useRef<HTMLDivElement>(null)
   const trailRefs = useRef<HTMLDivElement[]>([])
 
@@ -14,22 +12,13 @@ export const MouseFollower = () => {
 
   const lerp = (start: number, end: number, amt: number) => start + (end - start) * amt
 
-  // Theme-aware colors
+  // Dark theme colors
   const getThemeColors = () => {
-    if (theme === 'dark') {
-      return {
-        dotColor: 'rgb(48, 194, 61)', // Green for dark mode
-        dotGlow: '0 0 25px rgb(48, 194, 61), 0 0 50px rgba(48, 194, 61, 0.5)',
-        trailColor: 'rgba(48, 194, 61, 0.2)',
-        mixBlendMode: 'screen' as const
-      }
-    } else {
-      return {
-        dotColor: 'rgb(59, 130, 246)', // Blue for light mode
-        dotGlow: '0 0 25px rgb(59, 130, 246), 0 0 50px rgba(59, 130, 246, 0.5)',
-        trailColor: 'rgba(59, 130, 246, 0.2)',
-        mixBlendMode: 'multiply' as const
-      }
+    return {
+      dotColor: 'rgb(48, 194, 61)', // Green for dark mode
+      dotGlow: '0 0 25px rgb(48, 194, 61), 0 0 50px rgba(48, 194, 61, 0.5)',
+      trailColor: 'rgba(48, 194, 61, 0.2)',
+      mixBlendMode: 'screen' as const
     }
   }
 
@@ -74,7 +63,7 @@ export const MouseFollower = () => {
     }
   }, [])
 
-  // Update colors when theme changes
+  // Set colors on mount
   useEffect(() => {
     const colors = getThemeColors()
     
@@ -90,7 +79,7 @@ export const MouseFollower = () => {
         trail.style.mixBlendMode = colors.mixBlendMode
       }
     })
-  }, [theme])
+  }, [])
 
   return (
     <>
