@@ -2,8 +2,10 @@ import CountUp from '../blocks/TextAnimations/CountUp/CountUp'
 import ShinyText from '../blocks/TextAnimations/ShinyText/ShinyText'
 import ButtonShadow from './input/Button'
 import Hyperlink from './input/Hyperlink'
+import { getYearsOfExperience } from '../utils/experience'
 
 const Hero = () => {
+    const yearsOfExp = getYearsOfExperience()
     return (
         <div className="w-full animate-fade-down theme-text">
             <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl my-5 theme-text">
@@ -29,7 +31,7 @@ const Hero = () => {
                         <h3 className="theme-text">+</h3>
                         <CountUp
                             from={100}
-                            to={2}
+                            to={yearsOfExp}
                             separator=","
                             direction="up"
                             duration={1}

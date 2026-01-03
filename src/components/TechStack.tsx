@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ShinyText from "../blocks/TextAnimations/ShinyText/ShinyText.tsx";
 import { useState } from 'react';
+import { getYearsOfExperience } from '../utils/experience';
 
 const techStackData = [
     { name: 'Flutter', icon: '/flutter.svg', category: 'Mobile' },
@@ -10,8 +11,10 @@ const techStackData = [
     { name: 'TypeScript', icon: '/typescript.svg', category: 'Frontend' },
     { name: 'Tailwind', icon: '/tailwind.svg', category: 'Styling' },
     { name: 'Vue.js', icon: '/vue.svg', category: 'Frontend' },
+    { name: 'Nuxt', icon: '/nuxt.svg', category: 'Frontend' },
     { name: 'Next.js', icon: '/nextjs.svg', category: 'Frontend' },
     { name: 'React', icon: '/reactjs.svg', category: 'Frontend' },
+    { name: 'Angular', icon: '/angular.svg', category: 'Frontend' },
     { name: 'React Native', icon: '/reactjs.svg', category: 'Mobile' },
     { name: 'Postman', icon: '/postman.svg', category: 'Tools' },
     { name: 'PhpStorm', icon: '/phpstorm.svg', category: 'Tools' },
@@ -30,6 +33,7 @@ const categories = ['All', 'Frontend', 'Backend', 'Mobile', 'Database', 'Tools',
 
 function TechStack() {
     const [selectedCategory, setSelectedCategory] = useState('All');
+    const yearsOfExp = getYearsOfExperience();
 
     const filteredTechStack = selectedCategory === 'All' 
         ? techStackData 
@@ -180,7 +184,7 @@ function TechStack() {
                     <div className="text-sm theme-text-secondary">Categories</div>
                 </div>
                 <div className="text-center p-6 rounded-2xl theme-card">
-                    <div className="text-3xl font-bold text-green-custom mb-2">2</div>
+                    <div className="text-3xl font-bold text-green-custom mb-2">{yearsOfExp}</div>
                     <div className="text-sm theme-text-secondary">Years Experience</div>
                 </div>
                 <div className="text-center p-6 rounded-2xl theme-card">

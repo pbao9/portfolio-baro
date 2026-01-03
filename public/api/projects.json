@@ -1,6 +1,44 @@
 {
     "projects": [
         {
+            "id": -1,
+            "title": "AI Chatbot System",
+            "description": "Intelligent chatbot system with real-time communication capabilities. Built with NestJS backend and Next.js frontend, integrated with Ollama AI for natural language processing. Features real-time messaging, AI-powered responses, and seamless user experience.",
+            "thumbnail": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp",
+            "duration": "2025",
+            "price": 0,
+            "tech_stack": [
+                "/nestjs.svg",
+                "/nextjs.svg",
+                "/gemini.svg",
+                "/typescript.svg"
+            ],
+            "images": [
+                "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp"
+            ],
+            "link": "#",
+            "image_phone": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp"
+        },
+        {
+            "id": 0,
+            "title": "KFC Survey System",
+            "description": "Comprehensive survey system for all KFC restaurant staff from North to South Vietnam. The system enables data collection and analysis, generates PDF reports comparing previous year and current year results. Built with Docker from A-Z, ensuring consistency and easy deployment.",
+            "thumbnail": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp",
+            "duration": "10/2025 - 11/2025",
+            "price": 0,
+            "tech_stack": [
+                "/laravel.svg",
+                "/vue.svg",
+                "/docker.svg",
+                "/mysql.svg"
+            ],
+            "images": [
+                "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp"
+            ],
+            "link": "#",
+            "image_phone": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp"
+        },
+        {
             "id": 1,
             "title": "Media Website",
             "description": "A full-featured e-commerce website with payment integration.",

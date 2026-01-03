@@ -1,8 +1,10 @@
 import { Helmet } from 'react-helmet-async'
 import ShinyText from '../blocks/TextAnimations/ShinyText/ShinyText.tsx'
 import { CardCustom } from '../components/CardCustom.tsx'
+import { getYearsOfExperience } from '../utils/experience'
 
 export const Experience = () => {
+    const yearsOfExp = getYearsOfExperience()
     return (
         <div>
             <Helmet>
@@ -10,7 +12,7 @@ export const Experience = () => {
             </Helmet>
             <div className="w-full animate-fade-down">
                 <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl my-5 theme-text">
-                    Over 2 Years of
+                    Over {yearsOfExp} Years of
                     <br /> Develop
                     <ShinyText
                         text="Expertise"

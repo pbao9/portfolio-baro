@@ -4,6 +4,20 @@ import { FiExternalLink } from 'react-icons/fi'
 
 const projects = [
     {
+        title: 'AI Chatbot System',
+        description: 'Intelligent chatbot system with real-time communication capabilities. Built with NestJS backend and Next.js frontend, integrated with Gemini AI for natural language processing. Features real-time messaging, AI-powered responses, and seamless user experience.',
+        tech: ['NestJS', 'Next.js', 'Gemini AI', 'TypeScript'],
+        link: '#',
+        date: '2025',
+    },
+    {
+        title: 'KFC Survey System',
+        description: 'Comprehensive survey system for all KFC restaurant staff from North to South Vietnam. The system enables data collection and analysis, generates PDF reports comparing previous year and current year results. Built with Docker from A-Z, ensuring consistency and easy deployment.',
+        tech: ['Laravel', 'Vue.js', 'Docker', 'MySQL'],
+        link: '#',
+        date: '10/2025 - 11/2025',
+    },
+    {
         title: 'Project Devro Admin/User',
         description: 'Simple e-commerce platform with integrated VNPay payment gateway',
         tech: ['Laravel', 'MySQL', 'Livewire', 'Tailwind'],

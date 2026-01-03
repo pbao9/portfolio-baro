@@ -64,7 +64,7 @@ const CardPortfolio = () => {
             </h1>
             <a href='https://devro-tech.com/' className="theme-text text-sm mt-1 uppercase font-bold">Devro Tech</a>
 
-            <p className="theme-text-secondary text-sm mt-1">Back-End Developer</p>
+            <p className="theme-text-secondary text-sm mt-1">Software Engineer</p>
 
             <div
                 id="social"
