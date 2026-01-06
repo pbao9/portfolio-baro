@@ -14,13 +14,13 @@ const Master = () => {
             <SmoothScroll />
             <div className="relative">
                 <div className="theme-bg theme-text opacity-90 min-h-screen font-outfit w-full relative z-1">
-                    <div className="flex flex-col justify-center items-center max-w-[1190px] mx-auto">
+                    <div className="flex flex-col justify-center items-center max-w-[1280px] mx-auto">
                         <Header />
-                        <div className="relative z-[999] flex flex-wrap lg:flex-nowrap justify-center max-w-full px-4 md:px-10 py-10">
-                            <div className="w-full md:w-1/2 lg:w-1/4 top-50 relative lg:sticky self-start animate-fade-right px-4 lg:px-0">
+                        <div className="relative z-[999] flex flex-col lg:flex-row justify-center max-w-full px-2 sm:px-4 md:px-6 lg:px-10 py-4 sm:py-6 md:py-8 lg:py-10 gap-4 lg:gap-0">
+                            <div className="w-full lg:w-1/4 lg:sticky lg:top-20 self-start animate-fade-right">
                                 <CardPortfolio />
                             </div>
-                            <div className="w-full md:w-2/3 lg:w-3/4 p-3 rounded-lg mt-15 pl-[0] lg:pl-[5rem] lg:mt-0 px-4 container">
+                            <div className="w-full lg:w-3/4 p-2 sm:p-3 rounded-lg lg:pl-20">
                                 <Outlet />
                                 <Question />
                                 <Collaborate />
@@ -29,9 +29,9 @@ const Master = () => {
                         <Footer />
                     </div>
                 </div>
-            </div>           
+            </div>
         </div>
-    )
+    );
 }
 
 export default Master

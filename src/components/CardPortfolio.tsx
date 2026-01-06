@@ -14,7 +14,7 @@ const CardPortfolio = () => {
 
     return (
         <div
-            className="theme-shadow theme-card p-6 w-full text-center block rounded-3xl mx-auto 
+            className="theme-shadow theme-card p-4 sm:p-6 w-full max-w-sm lg:max-w-full mx-auto text-center block rounded-2xl sm:rounded-3xl 
             backdrop-blur-md relative overflow-hidden"
         >
             <PixelTransition
@@ -59,59 +59,61 @@ const CardPortfolio = () => {
                 animationStepDuration={0.4}
                 className="theme-border hover:theme-shadow-hover hover:border-green-custom transition-all duration-500 cursor-pointer border"
             />
-            <h1 className="text-4xl font-semibold theme-text mt-4">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold theme-text mt-3 sm:mt-4">
                 Baro Pham
             </h1>
-            <a href='https://devro-tech.com/' className="theme-text text-sm mt-1 uppercase font-bold">Devro Tech</a>
-
-            <p className="theme-text-secondary text-sm mt-1">Software Engineer</p>
-
-            <div
-                id="social"
-                className="flex flex-wrap justify-center gap-x-4 py-2"
+            <a
+                href="https://devro-tech.com/"
+                className="theme-text text-xs sm:text-sm mt-1 uppercase font-bold block"
             >
+                Devro Tech
+            </a>
+
+            <p className="theme-text-secondary text-xs sm:text-sm mt-1">Software Engineer</p>
+
+            <div id="social" className="flex flex-wrap justify-center gap-x-2 sm:gap-x-4 py-2">
                 <Link
                     to="https://github.com/pbao9"
                     target={'_blank'}
-                    className="group p-2 rounded-lg transition-all duration-300 relative"
+                    className="group p-1.5 sm:p-2 rounded-lg transition-all duration-300 relative"
                 >
                     <div className="absolute inset-0 bg-green-custom scale-0 group-hover:scale-100 transition-all duration-200 rounded-lg"></div>
                     <FaGithub
-                        size={24}
-                        className="text-green-custom group-hover:text-white transition-all duration-500 relative z-10"
+                        size={20}
+                        className="sm:w-6 sm:h-6 text-green-custom group-hover:text-white transition-all duration-500 relative z-10"
                     />
                 </Link>
                 <Link
                     to="https://www.linkedin.com/in/pbao/"
                     target={'_blank'}
-                    className="group p-2 rounded-lg transition-all duration-300 relative"
+                    className="group p-1.5 sm:p-2 rounded-lg transition-all duration-300 relative"
                 >
                     <div className="absolute inset-0 bg-green-custom scale-0 group-hover:scale-100 transition-all duration-200 rounded-lg"></div>
                     <FaLinkedin
-                        size={24}
-                        className="text-green-custom group-hover:text-white transition-all duration-500 relative z-10"
+                        size={20}
+                        className="sm:w-6 sm:h-6 text-green-custom group-hover:text-white transition-all duration-500 relative z-10"
                     />
                 </Link>
                 <Link
                     to="https://gitlab.com/pbao9"
                     target={'_blank'}
-                    className="group p-2 rounded-lg transition-all duration-300 relative"
+                    className="group p-1.5 sm:p-2 rounded-lg transition-all duration-300 relative"
                 >
                     <div className="absolute inset-0 bg-green-custom scale-0 group-hover:scale-100 transition-all duration-200 rounded-lg"></div>
                     <FaGitlab
-                        size={24}
-                        className="text-green-custom group-hover:text-white transition-all duration-500 relative z-10"
+                        size={20}
+                        className="sm:w-6 sm:h-6 text-green-custom group-hover:text-white transition-all duration-500 relative z-10"
                     />
                 </Link>
                 <Link
                     to="mailto:pbao.business@gmail.com"
                     target={'_blank'}
-                    className="group p-2 rounded-lg transition-all duration-300 relative"
+                    className="group p-1.5 sm:p-2 rounded-lg transition-all duration-300 relative"
                 >
                     <div className="absolute inset-0 bg-green-custom scale-0 group-hover:scale-100 transition-all duration-200 rounded-lg"></div>
                     <MdOutlineAlternateEmail
-                        size={24}
-                        className="text-green-custom group-hover:text-white transition-all duration-500 relative z-10"
+                        size={20}
+                        className="sm:w-6 sm:h-6 text-green-custom group-hover:text-white transition-all duration-500 relative z-10"
                     />
                 </Link>
             </div>
@@ -125,7 +127,7 @@ const CardPortfolio = () => {
                 icon={<TbFileCv />}
             /> */}
         </div>
-    )
+    );
 }
 
 export default CardPortfolio
