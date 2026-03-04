@@ -20,7 +20,7 @@ const CardPortfolio = () => {
             <PixelTransition
                 firstContent={
                     <img
-                        src="/avatar.jpeg"
+                        src="https://res.cloudinary.com/dqtxna4oa/image/upload/v1772595940/IMG_8796_Copy_wdkqxk.jpg"
                         alt="Avatar"
                         className={`w-full h-full object-cover ${
                             isImageLoaded ? 'blur-0' : 'blur-2xl'
