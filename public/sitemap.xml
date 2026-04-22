@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Home -->
+    <url>
+        <loc>https://baro.devrotech.com/</loc>
+        <lastmod>2026-04-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Projects -->
+    <url>
+        <loc>https://baro.devrotech.com/projects</loc>
+        <lastmod>2026-04-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://baro.devrotech.com/projects/victoire-lms</loc>
+        <lastmod>2026-03-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://baro.devrotech.com/projects/rose-dao</loc>
+        <lastmod>2025-12-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://baro.devrotech.com/projects/the-gioi-tui-vai</loc>
+        <lastmod>2025-07-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://baro.devrotech.com/projects/pos-system</loc>
+        <lastmod>2026-04-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://baro.devrotech.com/projects/nexon7-corporate-gifts</loc>
+        <lastmod>2026-04-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://baro.devrotech.com/projects/dermat-vn</loc>
+        <lastmod>2026-04-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://baro.devrotech.com/projects/kfc-survey-system</loc>
+        <lastmod>2025-11-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://baro.devrotech.com/projects/ai-chatbot-system</loc>
+        <lastmod>2025-12-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://baro.devrotech.com/projects/toeic-mastery-course</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://baro.devrotech.com/projects/ecommerce-api-cms</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://baro.devrotech.com/projects/visonland-real-estate</loc>
+        <lastmod>2024-11-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://baro.devrotech.com/projects/vipfishing-booking</loc>
+        <lastmod>2024-09-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://baro.devrotech.com/projects/devro-ecommerce</loc>
+        <lastmod>2024-04-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://baro.devrotech.com/projects/lafresh-ecommerce</loc>
+        <lastmod>2024-04-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://baro.devrotech.com/projects/school-transport-booking</loc>
+        <lastmod>2024-03-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://baro.devrotech.com/projects/viethouse-rentals</loc>
+        <lastmod>2024-01-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Tools -->
+    <url>
+        <loc>https://baro.devrotech.com/tools</loc>
+        <lastmod>2026-04-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Experience -->
+    <url>
+        <loc>https://baro.devrotech.com/experience</loc>
+        <lastmod>2026-04-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://baro.devrotech.com/experience/tgs</loc>
+        <lastmod>2026-04-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://baro.devrotech.com/experience/mevivu</loc>
+        <lastmod>2024-11-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Contact -->
+    <url>
+        <loc>https://baro.devrotech.com/contact</loc>
+        <lastmod>2026-04-22</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Project List (old route) -->
+    <url>
+        <loc>https://baro.devrotech.com/projects-list</loc>
+        <lastmod>2026-04-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+</urlset>

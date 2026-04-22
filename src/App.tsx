@@ -13,6 +13,7 @@ import ProjectList from './pages/Projects/Index.tsx'
 import ProjectDetail from './pages/Projects/Detail.tsx'
 import { TGSExp } from './pages/Experiece/TGSExp.tsx'
 import { ThemeProvider } from './contexts/ThemeContext'
+import ProjectDetailView from './pages/ProjectDetail.tsx'
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/" element={<Master />}>
                     <Route index element={<Home />} />
                     <Route path={'/projects'} element={<Projects />} />
+                    <Route path={'/projects/:slug'} element={<ProjectDetailView />} />
                     <Route path={'/contact'} element={<Contact />} />
                     <Route path={'/tools'} element={<Tools />} />
                     <Route path={'/experience'} element={<Experience />} />

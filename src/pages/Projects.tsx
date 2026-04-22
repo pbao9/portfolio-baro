@@ -1,11 +1,13 @@
 import Marquee from 'react-fast-marquee'
 import { FiExternalLink, FiLock } from 'react-icons/fi'
+import { Link } from 'react-router'
 
 type ProjectType = 'featured' | 'backend' | 'fullstack' | 'side'
 type DeploymentType = 'Production' | 'Internal' | 'Demo'
 
 interface Project {
     title: string
+    slug: string
     description: string
     tech: string[]
     link: string
@@ -21,6 +23,7 @@ interface Project {
 const projects: Project[] = [
     {
         title: 'Victoire LMS',
+        slug: 'victoire-lms',
         description: 'Comprehensive Learning Management System with AI-powered voice scoring.',
         tech: ['Laravel', 'React', 'Antd', 'Tailwind', 'Pusher', 'Gemini', 'Ollama'],
         link: 'https://lms.phapnguvictoire.com',
@@ -37,6 +40,7 @@ const projects: Project[] = [
     },
     {
         title: 'Rose DAO',
+        slug: 'rose-dao',
         description: 'eCommerce platform with Laravel GraphQL backend and Nuxt.js frontend.',
         tech: ['Laravel', 'GraphQL', 'Nuxt.js', 'Vue.js', 'Zod', 'Zustand', 'TanStack', 'PrimeVue'],
         link: 'https://rosedao.vn',
@@ -53,6 +57,7 @@ const projects: Project[] = [
     },
     {
         title: 'Thế giới túi vải',
+        slug: 'the-gioi-tui-vai',
         description: 'B2B eCommerce platform for wholesale canvas bags with performance optimization.',
         tech: ['WordPress', 'Elementor Pro', 'ACF Pro'],
         link: 'https://thegioituivai.com',
@@ -69,6 +74,7 @@ const projects: Project[] = [
     },
     {
         title: 'POS System',
+        slug: 'pos-system',
         description: 'Scalable RESTful POS system with Golang backend and React frontend.',
         tech: ['Golang', 'RESTful API', 'React', 'Next.js', 'Redux', 'TanStack'],
         link: '#',
@@ -85,6 +91,7 @@ const projects: Project[] = [
     },
     {
         title: 'Nexon7 Corporate Gifts',
+        slug: 'nexon7-corporate-gifts',
         description: 'Decoupled e-commerce platform with GraphQL APIs and Next.js storefront.',
         tech: ['Laravel', 'GraphQL', 'Next.js', 'Vue.js', 'MySQL'],
         link: 'https://nexon7.vn',
@@ -101,6 +108,7 @@ const projects: Project[] = [
     },
     {
         title: 'Dermat.vn',
+        slug: 'dermat-vn',
         description: 'Headless eCommerce with WordPress CMS and Astro ultra-fast frontend.',
         tech: ['WordPress', 'GraphQL', 'Astro', 'React'],
         link: 'https://dermat.vn',
@@ -117,6 +125,7 @@ const projects: Project[] = [
     },
     {
         title: 'KFC Survey System',
+        slug: 'kfc-survey-system',
         description: 'Nationwide data collection platform for KFC Vietnam with PDF reports.',
         tech: ['Laravel', 'Vue.js', 'Docker', 'MySQL'],
         link: '#',
@@ -133,6 +142,7 @@ const projects: Project[] = [
     },
     {
         title: 'AI Chatbot System',
+        slug: 'ai-chatbot-system',
         description: 'Real-time communication platform with Gemini AI integration.',
         tech: ['NestJS', 'Next.js', 'Gemini AI', 'TypeScript'],
         link: '#',
@@ -144,6 +154,7 @@ const projects: Project[] = [
     },
     {
         title: 'TOEIC Mastery Course',
+        slug: 'toeic-mastery-course',
         description: 'Educational platform for TOEIC preparation with interactive materials.',
         tech: ['React', 'Tailwind', 'Next.js'],
         link: 'https://edu-pham-hoang-phuc.id.vn/',
@@ -155,6 +166,7 @@ const projects: Project[] = [
     },
     {
         title: 'Ecommerce API & CMS',
+        slug: 'ecommerce-api-cms',
         description: 'Comprehensive API and Admin CMS for multi-platform eCommerce.',
         tech: ['Laravel', 'MySQL', 'React', 'Expo'],
         link: 'https://gitlab.com/ecom-api-app-cms',
@@ -166,6 +178,7 @@ const projects: Project[] = [
     },
     {
         title: 'VisonLand Real Estate',
+        slug: 'visonland-real-estate',
         description: 'Real estate API and CMS with payment and affiliate tracking.',
         tech: ['Laravel', 'MySQL', 'Postman'],
         link: 'https://github.com/pbao9/VisonLandAffiliate',
@@ -177,6 +190,7 @@ const projects: Project[] = [
     },
     {
         title: 'VipFishing Booking',
+        slug: 'vipfishing-booking',
         description: 'Fishing spot management system with events and referrals.',
         tech: ['Laravel', 'MySQL'],
         link: 'https://github.com/pbao9/VipFishing',
@@ -188,6 +202,7 @@ const projects: Project[] = [
     },
     {
         title: 'Devro Ecommerce',
+        slug: 'devro-ecommerce',
         description: 'eCommerce platform with VNPay payment gateway integration.',
         tech: ['Laravel', 'Livewire', 'Tailwind'],
         link: 'https://demo.baro-dev.io.vn/',
@@ -199,6 +214,7 @@ const projects: Project[] = [
     },
     {
         title: 'Lafresh Ecommerce',
+        slug: 'lafresh-ecommerce',
         description: 'eCommerce API for beverage products with promotional engine.',
         tech: ['Laravel', 'MySQL'],
         link: 'https://github.com/pbao9/Lafresh-Ecommerce',
@@ -210,6 +226,7 @@ const projects: Project[] = [
     },
     {
         title: 'School Transport Booking',
+        slug: 'school-transport-booking',
         description: 'Transportation management and booking API for school services.',
         tech: ['Laravel', 'MySQL'],
         link: 'http://babi2school.com.vn/',
@@ -221,6 +238,7 @@ const projects: Project[] = [
     },
     {
         title: 'VietHouse Rentals',
+        slug: 'viethouse-rentals',
         description: 'Real estate rental platform for premium apartments and offices.',
         tech: ['Laravel', 'MySQL'],
         link: 'https://viethousephumyhung.com/',
@@ -236,7 +254,10 @@ function ProjectCard({ project }: { project: Project }) {
     const isNDA = project.link === '#' || project.isPrivate
 
     return (
-        <div className="group flex flex-col w-[320px] mx-3 rounded-xl border border-white/5 bg-white/[0.02] hover:border-accent/20 transition-all duration-300 cursor-pointer shrink-0">
+        <Link
+            to={`/projects/${project.slug}`}
+            className="group flex flex-col w-[320px] mx-3 rounded-xl border border-white/5 bg-white/[0.02] hover:border-accent/20 transition-all duration-300 cursor-pointer shrink-0"
+        >
             <div className="relative h-44 overflow-hidden bg-white/5 rounded-t-xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-white/5 group-hover:from-accent/10 transition-colors" />
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -284,7 +305,7 @@ function ProjectCard({ project }: { project: Project }) {
                     )}
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 
@@ -325,13 +346,13 @@ const Projects = () => {
             </div>
 
             <div className="mt-12 text-center">
-                <a
-                    href="/projects-list"
+                <Link
+                    to="/projects-list"
                     className="inline-flex items-center gap-2 text-sm text-white/30 hover:text-accent transition-colors"
                 >
                     View all projects
                     <FiExternalLink size={14} />
-                </a>
+                </Link>
             </div>
         </section>
     )
