@@ -16,14 +16,14 @@ const CardPortfolio = () => {
 
     return (
         <div
-            className="theme-shadow theme-card p-4 sm:p-6 w-full max-w-sm lg:max-w-full mx-auto text-center block rounded-2xl sm:rounded-3xl 
+            className="theme-card p-4 sm:p-6 w-full max-w-sm lg:max-w-full mx-auto text-center block rounded-2xl sm:rounded-3xl 
             backdrop-blur-md relative overflow-hidden"
         >
             <PixelTransition
                 firstContent={
                     <img
                         src={firstContentImage}
-                        alt="Avatar"
+                        alt="Baro Pham - Software Engineer"
                         className={`w-full h-full object-cover ${
                             isImageLoaded ? 'blur-0' : 'blur-2xl'
                         }`}
@@ -40,7 +40,7 @@ const CardPortfolio = () => {
                     <div>
                         <img
                             src="https://res.cloudinary.com/dqtxna4oa/image/upload/v1750085951/Logo_jodsvn.jpg"
-                            alt="Avatar"
+                            alt="Devro Tech Logo"
                             className={`w-full h-full object-center object-cover ${
                                 isImageLoaded ? 'blur-0' : 'blur-2xl'
                             }`}
@@ -57,7 +57,7 @@ const CardPortfolio = () => {
                 gridSize={30}
                 pixelColor="var(--theme-text)"
                 animationStepDuration={0.4}
-                className="theme-border hover:theme-shadow-hover hover:border-green-custom transition-all duration-500 cursor-pointer border"
+                className="theme-border hover:border-green-custom transition-all duration-500 cursor-pointer border"
             />
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold theme-text mt-3 sm:mt-4">
                 Baro Pham
@@ -75,6 +75,7 @@ const CardPortfolio = () => {
                 <Link
                     to="https://github.com/pbao9"
                     target={'_blank'}
+                    aria-label="GitHub Profile"
                     className="group p-1.5 sm:p-2 rounded-lg transition-all duration-300 relative"
                 >
                     <div className="absolute inset-0 bg-green-custom scale-0 group-hover:scale-100 transition-all duration-200 rounded-lg"></div>
@@ -86,6 +87,7 @@ const CardPortfolio = () => {
                 <Link
                     to="https://www.linkedin.com/in/pbao/"
                     target={'_blank'}
+                    aria-label="LinkedIn Profile"
                     className="group p-1.5 sm:p-2 rounded-lg transition-all duration-300 relative"
                 >
                     <div className="absolute inset-0 bg-green-custom scale-0 group-hover:scale-100 transition-all duration-200 rounded-lg"></div>
@@ -97,6 +99,7 @@ const CardPortfolio = () => {
                 <Link
                     to="https://gitlab.com/pbao9"
                     target={'_blank'}
+                    aria-label="GitLab Profile"
                     className="group p-1.5 sm:p-2 rounded-lg transition-all duration-300 relative"
                 >
                     <div className="absolute inset-0 bg-green-custom scale-0 group-hover:scale-100 transition-all duration-200 rounded-lg"></div>
@@ -108,6 +111,7 @@ const CardPortfolio = () => {
                 <Link
                     to="mailto:pbao.business@gmail.com"
                     target={'_blank'}
+                    aria-label="Send Email"
                     className="group p-1.5 sm:p-2 rounded-lg transition-all duration-300 relative"
                 >
                     <div className="absolute inset-0 bg-green-custom scale-0 group-hover:scale-100 transition-all duration-200 rounded-lg"></div>
@@ -118,14 +122,6 @@ const CardPortfolio = () => {
                 </Link>
             </div>
             <Pulse />
-            {/* <ButtonShadow
-                target="_blank"
-                title="View my Resume"
-                path={
-                    'https://drive.google.com/file/d/1vgcB-O1UUgwdAOIuNMVsXd9A1gFnOwxU/view?usp=sharing'
-                }
-                icon={<TbFileCv />}
-            /> */}
         </div>
     );
 };

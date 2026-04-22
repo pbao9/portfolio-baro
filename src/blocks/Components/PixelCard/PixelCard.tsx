@@ -2,7 +2,7 @@
 	Installed from https://reactbits.dev/ts/tailwind/
 */
 
-import {useEffect, useRef} from "react";
+import {useEffect, useRef, type JSX} from "react";
 
 
 class Pixel {

@@ -1,37 +1,22 @@
-import Footer from '../components/partials/Footer'
-import Header from '../components/partials/Header'
 import { Outlet } from 'react-router'
-import CardPortfolio from '../components/CardPortfolio.tsx'
-import { Question } from '../components/Question.tsx'
-import { Collaborate } from '../components/Collaborate.tsx'
-import { MouseFollower } from '../components/MouseFollower.tsx'
-import { SmoothScroll } from '../components/SmoothScroll.tsx'
+import Header from '../components/partials/Header'
+import Footer from '../components/partials/Footer'
 
 const Master = () => {
     return (
-        <div>
-            <MouseFollower />
-            <SmoothScroll />
-            <div className="relative">
-                <div className="theme-bg theme-text opacity-90 min-h-screen font-outfit w-full relative z-1">
-                    <div className="flex flex-col justify-center items-center max-w-[1280px] mx-auto">
-                        <Header />
-                        <div className="relative z-[999] flex flex-col lg:flex-row justify-center max-w-full px-2 sm:px-4 md:px-6 lg:px-10 py-4 sm:py-6 md:py-8 lg:py-10 gap-4 lg:gap-0">
-                            <div className="w-full lg:w-1/4 lg:sticky lg:top-20 self-start animate-fade-right">
-                                <CardPortfolio />
-                            </div>
-                            <div className="w-full lg:w-3/4 p-2 sm:p-3 rounded-lg lg:pl-20">
-                                <Outlet />
-                                <Question />
-                                <Collaborate />
-                            </div>
-                        </div>
-                        <Footer />
-                    </div>
-                </div>
+        <div className="min-h-screen bg-canvas text-white font-jetbrains-mono">
+            <div className="fixed inset-0 bg-bg-image bg-cover bg-center opacity-[0.04] blur-sm pointer-events-none" />
+            <div className="fixed inset-0 bg-gradient-to-b from-transparent via-canvas/50 to-canvas pointer-events-none" />
+
+            <div className="relative z-10">
+                <Header />
+                <main className="max-w-6xl mx-auto px-6 md:px-10 lg:px-16 pt-16">
+                    <Outlet />
+                </main>
+                <Footer />
             </div>
         </div>
-    );
+    )
 }
 
 export default Master

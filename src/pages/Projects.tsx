@@ -1,29 +1,75 @@
-import { Helmet } from 'react-helmet-async';
-import { FiExternalLink, FiLock, FiCheckCircle } from 'react-icons/fi';
-import ShinyText from '../blocks/TextAnimations/ShinyText/ShinyText';
+import Marquee from 'react-fast-marquee'
+import { FiExternalLink, FiLock } from 'react-icons/fi'
 
-type ProjectType = 'featured' | 'backend' | 'fullstack' | 'side';
-type DeploymentType = 'Production' | 'Internal' | 'Demo';
+type ProjectType = 'featured' | 'backend' | 'fullstack' | 'side'
+type DeploymentType = 'Production' | 'Internal' | 'Demo'
 
 interface Project {
-    title: string;
-    description: string;
-    tech: string[];
-    link: string;
-    date: string;
-    type: ProjectType;
-    role: string;
-    isPrivate: boolean;
-    deployment: DeploymentType;
-    highlight?: string[];
-    metrics?: string[];
+    title: string
+    description: string
+    tech: string[]
+    link: string
+    date: string
+    type: ProjectType
+    role: string
+    isPrivate: boolean
+    deployment: DeploymentType
+    highlight?: string[]
+    thumbnail?: string
 }
 
 const projects: Project[] = [
     {
+        title: 'Victoire LMS',
+        description: 'Comprehensive Learning Management System with AI-powered voice scoring.',
+        tech: ['Laravel', 'React', 'Antd', 'Tailwind', 'Pusher', 'Gemini', 'Ollama'],
+        link: 'https://lms.phapnguvictoire.com',
+        date: '08/2025 - 03/2026',
+        type: 'featured',
+        role: 'Fullstack Developer',
+        isPrivate: false,
+        deployment: 'Production',
+        highlight: [
+            'Built comprehensive LMS with role-based management',
+            'Integrated AI voice scoring using Gemini and Ollama',
+            'Real-time features with Pusher',
+        ],
+    },
+    {
+        title: 'Rose DAO',
+        description: 'eCommerce platform with Laravel GraphQL backend and Nuxt.js frontend.',
+        tech: ['Laravel', 'GraphQL', 'Nuxt.js', 'Vue.js', 'Zod', 'Zustand', 'TanStack', 'PrimeVue'],
+        link: 'https://rosedao.vn',
+        date: '11/2025 - 12/2025',
+        type: 'featured',
+        role: 'Fullstack Developer',
+        isPrivate: false,
+        deployment: 'Production',
+        highlight: [
+            'Flexible GraphQL API layer with Laravel',
+            'Performant Nuxt.js storefront',
+            'Robust Admin CMS with Vue.js',
+        ],
+    },
+    {
+        title: 'Thế giới túi vải',
+        description: 'B2B eCommerce platform for wholesale canvas bags with performance optimization.',
+        tech: ['WordPress', 'Elementor Pro', 'ACF Pro'],
+        link: 'https://thegioituivai.com',
+        date: '06/2025 - 07/2025',
+        type: 'featured',
+        role: 'Fullstack Developer',
+        isPrivate: false,
+        deployment: 'Production',
+        highlight: [
+            'Custom B2B eCommerce functionalities',
+            'Dynamic layouts with ACF Pro',
+            'High performance optimization',
+        ],
+    },
+    {
         title: 'POS System',
-        description:
-            'Scalable RESTful POS system handling product management, order processing, and checkout workflows. Architected for high performance and seamless integration with multiple clients.',
+        description: 'Scalable RESTful POS system with Golang backend and React frontend.',
         tech: ['Golang', 'RESTful API', 'React', 'Next.js', 'Redux', 'TanStack'],
         link: '#',
         date: 'Ongoing',
@@ -32,15 +78,14 @@ const projects: Project[] = [
         isPrivate: true,
         deployment: 'Internal',
         highlight: [
-            'Architected scalable backend services with Golang',
-            'Implemented RESTful APIs for multi-platform clients',
-            'Ensured high performance for real-time workflows',
+            'Scalable backend services with Golang',
+            'RESTful APIs for multi-platform clients',
+            'High performance for real-time workflows',
         ],
     },
     {
         title: 'Nexon7 Corporate Gifts',
-        description:
-            'Decoupled e-commerce platform for corporate gifting. Built flexible GraphQL APIs to power an SSR-optimized Next.js storefront and a Vue.js CMS.',
+        description: 'Decoupled e-commerce platform with GraphQL APIs and Next.js storefront.',
         tech: ['Laravel', 'GraphQL', 'Next.js', 'Vue.js', 'MySQL'],
         link: 'https://nexon7.vn',
         date: 'Ongoing',
@@ -49,15 +94,14 @@ const projects: Project[] = [
         isPrivate: false,
         deployment: 'Production',
         highlight: [
-            'Architected Headless eCommerce system',
-            'Developed flexible GraphQL API layer with Laravel',
-            'Optimized SSR frontend for SEO and Core Web Vitals',
+            'Headless eCommerce system',
+            'GraphQL API layer with Laravel',
+            'SSR frontend for SEO',
         ],
     },
     {
         title: 'Dermat.vn',
-        description:
-            'Headless eCommerce architecture utilizing WordPress as a CMS and Astro for an ultra-fast frontend, delivering exceptional Core Web Vitals.',
+        description: 'Headless eCommerce with WordPress CMS and Astro ultra-fast frontend.',
         tech: ['WordPress', 'GraphQL', 'Astro', 'React'],
         link: 'https://dermat.vn',
         date: '03/2026 - 04/2026',
@@ -66,15 +110,14 @@ const projects: Project[] = [
         isPrivate: false,
         deployment: 'Production',
         highlight: [
-            'Implemented Headless CMS architecture with GraphQL',
-            'Built ultra-fast static frontend with Astro',
-            'Achieved high performance and SEO metrics',
+            'Headless CMS architecture',
+            'Ultra-fast Astro frontend',
+            'High performance metrics',
         ],
     },
     {
         title: 'KFC Survey System',
-        description:
-            'Nationwide data collection and analysis platform for KFC Vietnam staff. Containerized system generating complex YoY comparative PDF reports.',
+        description: 'Nationwide data collection platform for KFC Vietnam with PDF reports.',
         tech: ['Laravel', 'Vue.js', 'Docker', 'MySQL'],
         link: '#',
         date: '10/2025 - 11/2025',
@@ -83,15 +126,14 @@ const projects: Project[] = [
         isPrivate: true,
         deployment: 'Internal',
         highlight: [
-            'Engineered complex data aggregation logic',
-            'Automated YoY comparison PDF report generation',
-            'Dockerized entire stack for consistent deployments',
+            'Complex data aggregation logic',
+            'Automated YoY PDF reports',
+            'Dockerized stack',
         ],
     },
     {
         title: 'AI Chatbot System',
-        description:
-            'Intelligent real-time communication platform integrating Gemini AI for natural language processing.',
+        description: 'Real-time communication platform with Gemini AI integration.',
         tech: ['NestJS', 'Next.js', 'Gemini AI', 'TypeScript'],
         link: '#',
         date: '2025',
@@ -102,8 +144,7 @@ const projects: Project[] = [
     },
     {
         title: 'TOEIC Mastery Course',
-        description:
-            'Educational platform for TOEIC preparation with interactive course materials.',
+        description: 'Educational platform for TOEIC preparation with interactive materials.',
         tech: ['React', 'Tailwind', 'Next.js'],
         link: 'https://edu-pham-hoang-phuc.id.vn/',
         date: '02/2025',
@@ -114,7 +155,7 @@ const projects: Project[] = [
     },
     {
         title: 'Ecommerce API & CMS',
-        description: 'Comprehensive API and Admin CMS for a multi-platform eCommerce solution.',
+        description: 'Comprehensive API and Admin CMS for multi-platform eCommerce.',
         tech: ['Laravel', 'MySQL', 'React', 'Expo'],
         link: 'https://gitlab.com/ecom-api-app-cms',
         date: '01/2025 - 02/2025',
@@ -125,8 +166,7 @@ const projects: Project[] = [
     },
     {
         title: 'VisonLand Real Estate',
-        description:
-            'Real estate API and CMS with payment integration and affiliate commission tracking.',
+        description: 'Real estate API and CMS with payment and affiliate tracking.',
         tech: ['Laravel', 'MySQL', 'Postman'],
         link: 'https://github.com/pbao9/VisonLandAffiliate',
         date: '09/2024 - 11/2024',
@@ -137,8 +177,7 @@ const projects: Project[] = [
     },
     {
         title: 'VipFishing Booking',
-        description:
-            'Management system for fishing spots including event management and referral features.',
+        description: 'Fishing spot management system with events and referrals.',
         tech: ['Laravel', 'MySQL'],
         link: 'https://github.com/pbao9/VipFishing',
         date: '06/2024 - 09/2024',
@@ -149,7 +188,7 @@ const projects: Project[] = [
     },
     {
         title: 'Devro Ecommerce',
-        description: 'Streamlined eCommerce platform featuring VNPay payment gateway integration.',
+        description: 'eCommerce platform with VNPay payment gateway integration.',
         tech: ['Laravel', 'Livewire', 'Tailwind'],
         link: 'https://demo.baro-dev.io.vn/',
         date: '04/2024',
@@ -160,8 +199,7 @@ const projects: Project[] = [
     },
     {
         title: 'Lafresh Ecommerce',
-        description:
-            'Specialized eCommerce API for beverage products with a custom promotional engine.',
+        description: 'eCommerce API for beverage products with promotional engine.',
         tech: ['Laravel', 'MySQL'],
         link: 'https://github.com/pbao9/Lafresh-Ecommerce',
         date: '01/2024 - 04/2024',
@@ -172,7 +210,7 @@ const projects: Project[] = [
     },
     {
         title: 'School Transport Booking',
-        description: 'Transportation management and booking API tailored for school services.',
+        description: 'Transportation management and booking API for school services.',
         tech: ['Laravel', 'MySQL'],
         link: 'http://babi2school.com.vn/',
         date: '01/2024 - 03/2024',
@@ -183,7 +221,7 @@ const projects: Project[] = [
     },
     {
         title: 'VietHouse Rentals',
-        description: 'Real estate rental platform for premium apartments and office spaces.',
+        description: 'Real estate rental platform for premium apartments and offices.',
         tech: ['Laravel', 'MySQL'],
         link: 'https://viethousephumyhung.com/',
         date: '11/2023 - 01/2024',
@@ -192,198 +230,111 @@ const projects: Project[] = [
         isPrivate: false,
         deployment: 'Production',
     },
-];
+]
 
-const Projects = () => {
-    const featuredProjects = projects.filter((p) => p.type === 'featured');
-    const otherProjects = projects.filter((p) => p.type !== 'featured');
+function ProjectCard({ project }: { project: Project }) {
+    const isNDA = project.link === '#' || project.isPrivate
 
     return (
-        <div className="container mx-auto px-4 animate-fade-down pb-20">
-            <Helmet>
-                <title>Baro | Projects</title>
-            </Helmet>
-
-            <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl mb-6 theme-text">
-                Recent Projects and
-                <br className="hidden sm:block" />
-                <ShinyText
-                    text="Achievements"
-                    disabled={false}
-                    speed={3}
-                    className="custom-class"
-                />
-            </h1>
-
-            <p className="text-base md:text-lg theme-text-secondary max-w-3xl mb-12 leading-relaxed">
-                Most projects were independently developed and deployed in real-world environments.
-                Due to NDA constraints, some source code or domains cannot be publicly shared.
-            </p>
-
-            {/* Featured Projects */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
-                {featuredProjects.map((project, index) => {
-                    const isNDA = project.link === '#' || project.isPrivate;
-                    const CardElement = isNDA ? 'div' : 'a';
-
-                    return (
-                        <CardElement
-                            key={index}
-                            href={isNDA ? undefined : project.link}
-                            target={isNDA ? undefined : '_blank'}
-                            rel={isNDA ? undefined : 'noopener noreferrer'}
-                            className={`group flex flex-col h-full border border-white/10 rounded-2xl p-6 md:p-8 transition-all duration-300 bg-white/[0.01] ${
-                                isNDA
-                                    ? 'cursor-default'
-                                    : 'hover:border-green-custom/50 hover:bg-white/[0.03] hover:-translate-y-1'
-                            }`}
-                        >
-                            <div className="flex justify-between items-start mb-4">
-                                <div>
-                                    <h3
-                                        className={`text-xl md:text-2xl font-semibold theme-text mb-2 ${
-                                            !isNDA &&
-                                            'group-hover:text-green-custom transition-colors'
-                                        }`}
-                                    >
-                                        {project.title}
-                                    </h3>
-                                    <div className="text-sm text-green-custom/80 font-mono mb-4">
-                                        {project.role}
-                                    </div>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    {isNDA && (
-                                        <span className="text-xs px-2.5 py-1 rounded border border-yellow-500/30 text-yellow-500/80 bg-yellow-500/5 font-medium flex items-center gap-1.5 whitespace-nowrap">
-                                            <FiLock size={12} /> NDA
-                                        </span>
-                                    )}
-                                    {project.deployment === 'Production' && (
-                                        <span className="text-xs px-2.5 py-1 rounded border border-green-500/30 text-green-500/80 bg-green-500/5 font-medium whitespace-nowrap">
-                                            Production
-                                        </span>
-                                    )}
-                                    {!isNDA && (
-                                        <div className="p-2 rounded-full bg-white/5 text-theme-text-secondary group-hover:bg-green-custom/10 group-hover:text-green-custom transition-colors shrink-0">
-                                            <FiExternalLink size={16} />
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-
-                            <p className="text-sm md:text-base theme-text-secondary leading-relaxed mb-6">
-                                {project.description}
-                            </p>
-
-                            {project.highlight && project.highlight.length > 0 && (
-                                <ul className="mb-8 space-y-2.5">
-                                    {project.highlight.map((hl, i) => (
-                                        <li
-                                            key={i}
-                                            className="flex items-start gap-3 text-sm theme-text-secondary"
-                                        >
-                                            <span className="text-green-custom/80 mt-0.5 shrink-0">
-                                                <FiCheckCircle size={16} />
-                                            </span>
-                                            <span>{hl}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-
-                            <div className="pt-6 border-t border-white/10 mt-auto">
-                                <div className="flex flex-wrap gap-2">
-                                    {project.tech.map((t, i) => (
-                                        <span
-                                            key={i}
-                                            className="text-xs font-medium px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 theme-text-muted"
-                                        >
-                                            {t}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-                        </CardElement>
-                    );
-                })}
+        <div className="group flex flex-col w-[320px] mx-3 rounded-xl border border-white/5 bg-white/[0.02] hover:border-accent/20 transition-all duration-300 cursor-pointer shrink-0">
+            <div className="relative h-44 overflow-hidden bg-white/5 rounded-t-xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-white/5 group-hover:from-accent/10 transition-colors" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-3xl font-jetbrains-mono font-semibold text-white/10 group-hover:text-accent/20 transition-colors">
+                        {project.title.charAt(0)}
+                    </span>
+                </div>
+                <div className="absolute top-3 right-3 flex gap-2">
+                    {isNDA && (
+                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-yellow-500/10 text-yellow-500/60 flex items-center gap-1">
+                            <FiLock size={8} /> NDA
+                        </span>
+                    )}
+                    {project.deployment === 'Production' && (
+                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-accent/10 text-accent/60">
+                            Prod
+                        </span>
+                    )}
+                </div>
             </div>
 
-            {/* Other Projects */}
-            <h2 className="text-2xl font-bold theme-text mb-6">Other Notable Projects</h2>
-            <div className="flex flex-col border border-white/10 rounded-2xl overflow-hidden bg-white/[0.01]">
-                {otherProjects.map((project, index) => {
-                    const isNDA = project.link === '#' || project.isPrivate;
-                    const RowElement = isNDA ? 'div' : 'a';
+            <div className="p-4 flex flex-col flex-1">
+                <div className="flex items-start justify-between mb-2">
+                    <h3 className="font-jetbrains-mono text-sm font-medium text-white/80 group-hover:text-accent transition-colors truncate pr-2">
+                        {project.title}
+                    </h3>
+                    {!isNDA && (
+                        <FiExternalLink size={14} className="text-white/20 group-hover:text-accent transition-colors shrink-0 mt-1" />
+                    )}
+                </div>
 
-                    return (
-                        <RowElement
-                            key={index}
-                            href={isNDA ? undefined : project.link}
-                            target={isNDA ? undefined : '_blank'}
-                            rel={isNDA ? undefined : 'noopener noreferrer'}
-                            className={`group flex flex-col md:flex-row md:items-center justify-between p-5 border-b border-white/10 last:border-b-0 transition-colors ${
-                                isNDA
-                                    ? 'cursor-default'
-                                    : 'hover:bg-white/[0.03] cursor-pointer'
-                            }`}
+                <p className="text-xs text-white/30 mb-3 line-clamp-2">{project.description}</p>
+
+                <div className="flex flex-wrap gap-1.5 mt-auto">
+                    {project.tech.slice(0, 4).map((t, i) => (
+                        <span
+                            key={i}
+                            className="text-[10px] px-2 py-0.5 rounded bg-white/5 text-white/30 font-jetbrains-mono"
                         >
-                            <div className="flex-1 md:pr-6">
-                                <div className="flex flex-wrap items-center gap-3 mb-2">
-                                    <h3
-                                        className={`font-semibold text-lg theme-text ${
-                                            !isNDA &&
-                                            'group-hover:text-green-custom transition-colors'
-                                        }`}
-                                    >
-                                        {project.title}
-                                    </h3>
-                                    <span className="text-xs font-mono text-green-custom/70">
-                                        {project.role}
-                                    </span>
-                                    {isNDA && (
-                                        <span className="text-[10px] px-1.5 py-0.5 rounded border border-yellow-500/30 text-yellow-500/80 bg-yellow-500/5 uppercase font-medium tracking-wider flex items-center gap-1">
-                                            <FiLock size={10} /> NDA
-                                        </span>
-                                    )}
-                                    {project.deployment === 'Production' && (
-                                        <span className="text-[10px] px-1.5 py-0.5 rounded border border-green-500/30 text-green-500/80 bg-green-500/5 uppercase font-medium tracking-wider">
-                                            Prod
-                                        </span>
-                                    )}
-                                </div>
-                                <p className="text-sm theme-text-secondary line-clamp-2 md:line-clamp-1">
-                                    {project.description}
-                                </p>
-                            </div>
-
-                            <div className="flex items-center justify-between md:justify-end gap-6 mt-4 md:mt-0 shrink-0">
-                                <div className="flex flex-wrap items-center gap-2">
-                                    {project.tech.slice(0, 3).map((t, i) => (
-                                        <span
-                                            key={i}
-                                            className="text-[11px] px-2.5 py-1 rounded-full bg-white/5 border border-white/5 theme-text-muted"
-                                        >
-                                            {t}
-                                        </span>
-                                    ))}
-                                    {project.tech.length > 3 && (
-                                        <span className="text-[11px] font-medium px-2 py-1 theme-text-muted">
-                                            +{project.tech.length - 3}
-                                        </span>
-                                    )}
-                                </div>
-                                {!isNDA && (
-                                    <div className="text-theme-text-secondary opacity-0 group-hover:opacity-100 group-hover:text-green-custom transition-all -translate-x-2 group-hover:translate-x-0">
-                                        <FiExternalLink size={18} />
-                                    </div>
-                                )}
-                            </div>
-                        </RowElement>
-                    );
-                })}
+                            {t}
+                        </span>
+                    ))}
+                    {project.tech.length > 4 && (
+                        <span className="text-[10px] text-white/20">+{project.tech.length - 4}</span>
+                    )}
+                </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Projects;
+const Projects = () => {
+    const row1 = projects.filter((_, i) => i % 2 === 0)
+    const row2 = projects.filter((_, i) => i % 2 === 1)
+
+    return (
+        <section className="py-16">
+            <div className="mb-10">
+                <p className="text-accent text-sm font-jetbrains-mono uppercase tracking-wider mb-3">// Portfolio</p>
+                <h2 className="font-jetbrains-mono font-semibold text-3xl md:text-4xl lg:text-5xl leading-tight mb-4">
+                    Recent Projects &<br />
+                    <span className="text-white/40">Achievements</span>
+                </h2>
+                <p className="text-white/50 max-w-2xl leading-relaxed">
+                    Most projects were independently developed and deployed in real-world environments.
+                    Due to NDA constraints, some source code or domains cannot be publicly shared.
+                </p>
+            </div>
+
+            <div className="space-y-4">
+                <div className="overflow-hidden">
+                    <Marquee gradient={true} gradientColor="#1a1a1a" gradientWidth={100} speed={25} pauseOnHover>
+                        {row1.map((project, i) => (
+                            <ProjectCard key={`row1-${i}`} project={project} />
+                        ))}
+                    </Marquee>
+                </div>
+
+                <div className="overflow-hidden">
+                    <Marquee gradient={true} gradientColor="#1a1a1a" gradientWidth={100} speed={25} direction="right" pauseOnHover>
+                        {row2.map((project, i) => (
+                            <ProjectCard key={`row2-${i}`} project={project} />
+                        ))}
+                    </Marquee>
+                </div>
+            </div>
+
+            <div className="mt-12 text-center">
+                <a
+                    href="/projects-list"
+                    className="inline-flex items-center gap-2 text-sm text-white/30 hover:text-accent transition-colors"
+                >
+                    View all projects
+                    <FiExternalLink size={14} />
+                </a>
+            </div>
+        </section>
+    )
+}
+
+export default Projects

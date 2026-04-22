@@ -1,176 +1,142 @@
-import ShinyText from '../blocks/TextAnimations/ShinyText/ShinyText.tsx';
-import { useState } from 'react';
-import { getYearsOfExperience } from '../utils/experience';
+import Marquee from 'react-fast-marquee'
 
-const techStackData = [
-    { name: 'Flutter', icon: '/flutter.svg', category: 'Mobile' },
-    { name: 'Laravel', icon: '/laravel.svg', category: 'Backend' },
-    { name: 'TypeScript', icon: '/typescript.svg', category: 'Frontend' },
-    { name: 'Tailwind', icon: '/tailwind.svg', category: 'Styling' },
-    { name: 'Vue.js', icon: '/vue.svg', category: 'Frontend' },
-    { name: 'Nuxt', icon: '/nuxt.svg', category: 'Frontend' },
-    { name: 'Next.js', icon: '/nextjs.svg', category: 'Frontend' },
-    { name: 'React', icon: '/reactjs.svg', category: 'Frontend' },
-    { name: 'Angular', icon: '/angular.svg', category: 'Frontend' },
-    { name: 'React Native', icon: '/reactjs.svg', category: 'Mobile' },
-    { name: 'Postman', icon: '/postman.svg', category: 'Tools' },
-    { name: 'PhpStorm', icon: '/phpstorm.svg', category: 'Tools' },
-    { name: 'MongoDB', icon: '/mongodb.svg', category: 'Database' },
-    { name: 'MySQL', icon: '/mysql.svg', category: 'Database' },
-    { name: 'Swagger', icon: '/swagger.svg', category: 'Tools' },
-    { name: 'CodeIgniter', icon: '/codeigniter.svg', category: 'Backend' },
-    { name: 'Magento', icon: '/magento-icon.svg', category: 'E-commerce' },
-    { name: 'WordPress', icon: '/wordpress.svg', category: 'E-commerce' },
-    { name: 'Redis', icon: '/redis.svg', category: 'Database' },
-    { name: 'Bootstrap 5', icon: '/bootstrap.svg', category: 'Styling' },
-    { name: 'Firebase', icon: '/firebase.svg', category: 'Database' },
-    { name: 'Golang', icon: '/golang.svg', category: 'Backend' },
-    { name: 'Docker', icon: '/docker.svg', category: 'Tools' },
-    { name: 'Python', icon: '/python.svg', category: 'Backend' },
-    { name: 'GraphQL', icon: '/graphql.svg', category: 'Backend' },
-    { name: 'PostqreSQL', icon: '/postgresql.svg', category: 'Database' },
-];
+const techGroups = {
+    Frontend: [
+        { name: 'TypeScript', icon: '/typescript.svg' },
+        { name: 'Vue.js', icon: '/vue.svg' },
+        { name: 'Nuxt', icon: '/nuxt.svg' },
+        { name: 'Next.js', icon: '/nextjs.svg' },
+        { name: 'React', icon: '/reactjs.svg' },
+        { name: 'Angular', icon: '/angular.svg' },
+    ],
+    Backend: [
+        { name: 'Laravel', icon: '/laravel.svg' },
+        { name: 'CodeIgniter', icon: '/codeigniter.svg' },
+        { name: 'Golang', icon: '/golang.svg' },
+        { name: 'Python', icon: '/python.svg' },
+        { name: 'GraphQL', icon: '/graphql.svg' },
+        { name: 'NestJS', icon: '/nestjs.svg' },
+    ],
+    Mobile: [
+        { name: 'Flutter', icon: '/flutter.svg' },
+        { name: 'React Native', icon: '/reactjs.svg' },
+    ],
+    Database: [
+        { name: 'MySQL', icon: '/mysql.svg' },
+        { name: 'MongoDB', icon: '/mongodb.svg' },
+        { name: 'Redis', icon: '/redis.svg' },
+        { name: 'Firebase', icon: '/firebase.svg' },
+        { name: 'PostgreSQL', icon: '/postgresql.svg' },
+    ],
+    Tools: [
+        { name: 'Docker', icon: '/docker.svg' },
+        { name: 'Postman', icon: '/postman.svg' },
+        { name: 'PhpStorm', icon: '/phpstorm.svg' },
+        { name: 'Swagger', icon: '/swagger.svg' },
+        { name: 'Git', icon: '/git.svg' },
+    ],
+    Styling: [
+        { name: 'Tailwind', icon: '/tailwind.svg' },
+        { name: 'Bootstrap 5', icon: '/bootstrap.svg' },
+    ],
+    Ecommerce: [
+        { name: 'WordPress', icon: '/wordpress.svg' },
+        { name: 'Magento', icon: '/magento-icon.svg' },
+    ],
+}
 
-const categories = [
-    'All',
-    'Frontend',
-    'Backend',
-    'Mobile',
-    'Database',
-    'Tools',
-    'Styling',
-    'E-commerce',
-];
-
-interface Tech {
-    name: string;
-    icon: string;
-    category: string;
+function TechItem({ name, icon }: { name: string; icon: string }) {
+    return (
+        <div className="flex items-center gap-3 px-5 py-3 mx-3 rounded-xl border border-white/5 bg-white/[0.02] hover:border-accent/20 hover:bg-white/[0.04] transition-all duration-300 cursor-pointer shrink-0">
+            <img
+                src={icon}
+                alt={name}
+                width={24}
+                height={24}
+                className="opacity-50 hover:opacity-100 transition-opacity"
+            />
+            <span className="text-sm font-jetbrains-mono text-white/60 hover:text-white transition-colors whitespace-nowrap">
+                {name}
+            </span>
+        </div>
+    )
 }
 
 function TechStack() {
-    const [selectedCategory, setSelectedCategory] = useState('All');
-    const yearsOfExp = getYearsOfExperience();
+    const groupEntries = Object.entries(techGroups)
 
-    const filteredTechStack =
-        selectedCategory === 'All'
-            ? techStackData
-            : techStackData.filter((tech) => tech.category === selectedCategory);
+    const row1Groups = groupEntries.filter((_, i) => i % 2 === 0)
+    const row2Groups = groupEntries.filter((_, i) => i % 2 === 1)
 
-    const renderTechCard = (tech: Tech, index: number) => (
-        <div key={index} className="px-2">
-            <div className="group relative p-6 rounded-2xl theme-card theme-border hover:theme-shadow-hover transition-all duration-500 transform cursor-pointer">
-                {/* Gradient Background on Hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-green-custom/10 to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                {/* Tech Icon */}
-                <div className="relative z-10 flex flex-col items-center">
-                    <div className="w-16 h-16 mb-4 p-3 rounded-xl theme-bg-secondary flex items-center justify-center transition-transform duration-300">
-                        <img
-                            src={tech.icon}
-                            alt={tech.name}
-                            width={40}
-                            height={40}
-                            className="filter group-hover:brightness-110 transition-all duration-300"
-                        />
-                    </div>
-
-                    {/* Tech Name */}
-                    <h3 className="font-semibold text-sm theme-text text-center mb-2">
-                        {tech.name}
-                    </h3>
-
-                    {/* Category Badge */}
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-custom/20 text-green-custom border border-green-custom/30">
-                        {tech.category}
-                    </span>
-                </div>
-            </div>
-        </div>
-    );
+    const row1Items = row1Groups.flatMap(([_, items]) => items)
+    const row2Items = row2Groups.flatMap(([_, items]) => items)
 
     return (
-        <div className="slider-container animate-fade-down">
-            <div className="text-center mb-12">
-                <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl mb-6 theme-text">
-                    Top-Tier Tools for Exceptional
-                    <ShinyText
-                        text="Results"
-                        disabled={false}
-                        speed={3}
-                        className="custom-class mx-2"
-                    />
-                </h1>
-                <p className="text-lg theme-text-secondary max-w-2xl mx-auto">
-                    Leveraging cutting-edge technologies to deliver exceptional digital experiences
+        <section className="py-16">
+            <div className="mb-12">
+                <p className="text-accent text-sm font-jetbrains-mono uppercase tracking-wider mb-3">// Skills</p>
+                <h2 className="font-outfit font-semibold text-3xl md:text-4xl lg:text-5xl leading-tight mb-4">
+                    Tools &<br />
+                    <span className="text-white/40">Technologies</span>
+                </h2>
+                <p className="text-white/50 max-w-2xl leading-relaxed">
+                    Leveraging cutting-edge technologies to deliver exceptional digital experiences.
                 </p>
             </div>
 
-            {/* Category Tabs */}
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-                {categories.map((category) => (
-                    <button
-                        key={category}
-                        onClick={() => setSelectedCategory(category)}
-                        className={`px-6 py-2 rounded-full transition-all duration-300 text-sm font-medium ${
-                            selectedCategory === category
-                                ? 'bg-green-custom text-white shadow-lg shadow-green-custom/30'
-                                : 'theme-card theme-border hover:theme-bg-tertiary theme-text'
-                        }`}
+            <div className="space-y-4 mb-12">
+                {/* Row 1: Left to Right */}
+                <div className="overflow-hidden rounded-xl">
+                    <Marquee gradient={true} gradientColor="#1a1a1a" gradientWidth={80} speed={30} pauseOnHover>
+                        {row1Items.map((tech, i) => (
+                            <TechItem key={`row1-${i}`} name={tech.name} icon={tech.icon} />
+                        ))}
+                    </Marquee>
+                </div>
+
+                {/* Row 2: Right to Left */}
+                <div className="overflow-hidden rounded-xl">
+                    <Marquee
+                        gradient={true}
+                        gradientColor="#1a1a1a"
+                        gradientWidth={80}
+                        speed={30}
+                        direction="right"
+                        pauseOnHover
                     >
-                        {category}
-                        {selectedCategory === category && (
-                            <span className="ml-2 text-xs">
-                                (
-                                {selectedCategory === 'All'
-                                    ? techStackData.length
-                                    : techStackData.filter((tech) => tech.category === category)
-                                          .length}
-                                )
-                            </span>
-                        )}
-                    </button>
-                ))}
-            </div>
-
-            {/* Tech Stack Display */}
-            {filteredTechStack.length > 0 ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
-                    {filteredTechStack.map((tech, index) => renderTechCard(tech, index))}
-                </div>
-            ) : (
-                <div className="text-center py-12">
-                    <div className="text-6xl mb-4">🔍</div>
-                    <h3 className="text-xl font-semibold theme-text mb-2">No technologies found</h3>
-                    <p className="theme-text-secondary">Try selecting a different category</p>
-                </div>
-            )}
-
-            {/* Stats Section */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-                <div className="text-center p-6 rounded-2xl theme-card">
-                    <div className="text-3xl font-bold text-green-custom mb-2">
-                        {techStackData.length}+
-                    </div>
-                    <div className="text-sm theme-text-secondary">Technologies</div>
-                </div>
-                <div className="text-center p-6 rounded-2xl theme-card">
-                    <div className="text-3xl font-bold text-green-custom mb-2">
-                        {categories.length - 1}
-                    </div>
-                    <div className="text-sm theme-text-secondary">Categories</div>
-                </div>
-                <div className="text-center p-6 rounded-2xl theme-card">
-                    <div className="text-3xl font-bold text-green-custom mb-2">{yearsOfExp}</div>
-                    <div className="text-sm theme-text-secondary">Years Experience</div>
-                </div>
-                <div className="text-center p-6 rounded-2xl theme-card">
-                    <div className="text-3xl font-bold text-green-custom mb-2">50+</div>
-                    <div className="text-sm theme-text-secondary">Projects Completed</div>
+                        {row2Items.map((tech, i) => (
+                            <TechItem key={`row2-${i}`} name={tech.name} icon={tech.icon} />
+                        ))}
+                    </Marquee>
                 </div>
             </div>
-        </div>
-    );
+
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+                <div className="text-center p-6 rounded-xl border border-white/5 bg-white/[0.02]">
+                    <div className="text-3xl font-outfit font-semibold text-accent mb-1">
+                        {Object.values(techGroups).flat().length}+
+                    </div>
+                    <div className="text-sm text-white/40 font-jetbrains-mono">Technologies</div>
+                </div>
+                <div className="text-center p-6 rounded-xl border border-white/5 bg-white/[0.02]">
+                    <div className="text-3xl font-outfit font-semibold text-accent mb-1">
+                        {groupEntries.length}
+                    </div>
+                    <div className="text-sm text-white/40 font-jetbrains-mono">Categories</div>
+                </div>
+                <div className="text-center p-6 rounded-xl border border-white/5 bg-white/[0.02]">
+                    <div className="text-3xl font-outfit font-semibold text-accent mb-1">3+</div>
+                    <div className="text-sm text-white/40 font-jetbrains-mono">Years Exp</div>
+                </div>
+                <div className="text-center p-6 rounded-xl border border-white/5 bg-white/[0.02]">
+                    <div className="text-3xl font-outfit font-semibold text-accent mb-1">35+</div>
+                    <div className="text-sm text-white/40 font-jetbrains-mono">Projects</div>
+                </div>
+            </div>
+        </section>
+    )
 }
 
-export default TechStack;
+export default TechStack

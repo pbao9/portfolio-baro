@@ -1,10 +1,7 @@
-import { useEffect, useState, useRef } from 'react'
-import ButtonShadow from '../../components/input/Button'
-import { FiArrowRight } from 'react-icons/fi'
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router'
+import { FiArrowUpRight } from 'react-icons/fi'
 import { Helmet } from 'react-helmet-async'
-import gsap from 'gsap'
-import ShinyText from '../../blocks/TextAnimations/ShinyText/ShinyText'
-import ViewPort from '../../components/partials/ViewPort'
 
 interface Project {
     id: number
@@ -19,8 +16,7 @@ interface Project {
 
 const ProjectList = () => {
     const [projects, setProjects] = useState<Project[]>([])
-    const [loading, setLoading] = useState<boolean>(true) // Thêm trạng thái loading
-    const projectRef = useRef<HTMLDivElement>(null)
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         fetch('/api/projects.json')
@@ -30,40 +26,24 @@ const ProjectList = () => {
             })
             .then((data) => {
                 setProjects(data.projects)
-                setLoading(false) // Khi dữ liệu đã tải, đổi trạng thái loading thành false
+                setLoading(false)
             })
             .catch((error) => {
                 console.error('Error fetching projects:', error)
-                setLoading(false) // Nếu có lỗi, tắt loading
+                setLoading(false)
             })
     }, [])
 
-    useEffect(() => {
-        if (projects.length > 0) {
-            gsap.fromTo(
-                '.project-item',
-                { opacity: 0, y: 50 },
-                {
-                    opacity: 1,
-                    y: 0,
-                    stagger: 0.2,
-                    duration: 0.8,
-                    ease: 'power3.out',
-                }
-            )
-        }
-    }, [projects])
-
-    // Skeleton loader
     const renderSkeleton = () => (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 my-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[...Array(6)].map((_, index) => (
-                <div key={index} className="project-item bg-[#222] rounded-lg w-full px-10 pt-3 shadow-lg mt-3 animate-pulse">
-                    <div className="h-48 bg-gray-700 rounded-lg mb-4"></div>
-                    <div className="h-4 bg-gray-700 rounded w-3/4 mb-2"></div>
-                    <div className="h-4 bg-gray-700 rounded w-1/2 mb-2"></div>
-                    <div className="h-4 bg-gray-700 rounded w-1/2 mb-2"></div>
-                    <div className="h-10 bg-gray-700 rounded w-1/2 mb-4"></div>
+                <div key={index} className="rounded-xl border border-white/5 bg-white/[0.02] overflow-hidden animate-pulse">
+                    <div className="h-48 bg-white/5"></div>
+                    <div className="p-5 space-y-3">
+                        <div className="h-4 bg-white/5 rounded w-3/4"></div>
+                        <div className="h-3 bg-white/5 rounded w-1/2"></div>
+                        <div className="h-3 bg-white/5 rounded w-1/3"></div>
+                    </div>
                 </div>
             ))}
         </div>
@@ -72,69 +52,83 @@ const ProjectList = () => {
     return (
         <>
             <Helmet>
-                <title>Baro | Projects</title>
+                <title>Baro Pham — All Projects</title>
+                <meta name="description" content="Browse all projects by Baro Pham including web development, eCommerce, and API projects." />
             </Helmet>
 
-            <div className="my-10">
-                <div className="text-center">
-                    <ShinyText
-                        text={'Projects'}
-                        disabled={false}
-                        speed={3}
-                        className="font-bold text-4xl sm:text-5xl md:text-6xl text-center mb-3"
-                    />
+            <section className="py-16">
+                <div className="mb-12">
+                    <p className="text-accent text-sm font-jetbrains-mono uppercase tracking-wider mb-3">// All Work</p>
+                    <h2 className="font-outfit font-semibold text-3xl md:text-4xl lg:text-5xl leading-tight mb-4">
+                        All<br />
+                        <span className="text-white/40">Projects</span>
+                    </h2>
+                    <p className="text-white/50 max-w-2xl leading-relaxed">
+                        A complete collection of projects I've built, from eCommerce platforms to complex API systems.
+                    </p>
                 </div>
 
-                {/* Hiển thị skeleton khi dữ liệu chưa tải */}
                 {loading ? (
                     renderSkeleton()
                 ) : (
-                    <div ref={projectRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 my-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {projects.map((project) => (
-                            <div key={project.id} className="project-item">
-                                <ViewPort data={project.thumbnail} />
-                                <div className="bg-[#222] rounded-lg w-full px-10 pt-3 shadow-lg mt-3">
-                                    <div className="text-center font-semibold text-white">
-                                        Website: {project.title} 💻
+                            <Link
+                                key={project.id}
+                                to={`/projects-list/view/${project.id}`}
+                                className="group rounded-xl border border-white/5 bg-white/[0.02] overflow-hidden hover:border-accent/20 transition-all duration-300 hover:-translate-y-1"
+                            >
+                                <div className="relative h-48 overflow-hidden bg-white/5">
+                                    <img
+                                        src={project.thumbnail}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover object-top group-hover:object-bottom transition-all duration-700"
+                                        loading="lazy"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-canvas/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                    <div className="absolute top-3 right-3 p-2 rounded-full bg-canvas/80 text-white/40 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-2 group-hover:translate-x-0">
+                                        <FiArrowUpRight size={16} />
                                     </div>
-                                    <div className="text-center font-semibold text-white">
-                                        Duration: {project.duration} ⏲️
-                                    </div>
-                                    <div className="text-center font-semibold text-white">
-                                        Price: {''}
-                                        {project.price === 0
-                                            ? 'Negotiable'
-                                            : new Intl.NumberFormat('vi-VN', {
-                                                  style: 'currency',
-                                                  currency: 'VND',
-                                              }).format(project.price)}
-                                        💰
-                                    </div>
-                                    <div className="flex gap-3 py-3 mx-auto justify-center">
-                                        <h1 className="font-bold">Tech Stack:</h1>
-                                        {project.tech_stack.map((icon, index) => (
+                                </div>
+
+                                <div className="p-5">
+                                    <h3 className="font-semibold text-base mb-2 group-hover:text-accent transition-colors">
+                                        {project.title}
+                                    </h3>
+                                    <p className="text-xs text-white/40 mb-3">{project.duration}</p>
+
+                                    {project.price > 0 && (
+                                        <p className="text-sm text-accent/70 mb-3">
+                                            {new Intl.NumberFormat('vi-VN', {
+                                                style: 'currency',
+                                                currency: 'VND',
+                                            }).format(project.price)}
+                                        </p>
+                                    )}
+
+                                    <div className="flex flex-wrap gap-1.5 pt-3 border-t border-white/5">
+                                        {project.tech_stack.slice(0, 4).map((icon, index) => (
                                             <img
                                                 key={index}
                                                 src={icon}
-                                                alt="tech stack icon"
-                                                width={30}
-                                                height={30}  
+                                                alt="tech"
+                                                width={20}
+                                                height={20}
+                                                className="opacity-40 hover:opacity-80 transition-opacity"
                                             />
                                         ))}
-                                    </div>
-                                    <div className="w-full mx-auto py-3">
-                                        <ButtonShadow
-                                            path={`/projects-list/view/${project.id}`}
-                                            title="View detail"
-                                            icon={<FiArrowRight />}
-                                        />
+                                        {project.tech_stack.length > 4 && (
+                                            <span className="text-xs text-white/30 px-1.5 py-0.5">
+                                                +{project.tech_stack.length - 4}
+                                            </span>
+                                        )}
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 )}
-            </div>
+            </section>
         </>
     )
 }
