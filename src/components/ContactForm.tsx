@@ -28,13 +28,17 @@ export const ContactForm = () => {
     return (
         <section className="py-16">
             <div className="mb-12">
-                <p className="text-accent text-sm font-jetbrains-mono uppercase tracking-wider mb-3">// Contact</p>
+                <p className="text-accent text-sm font-jetbrains-mono uppercase tracking-wider mb-3">
+                    // Contact
+                </p>
                 <h2 className="font-jetbrains-mono font-semibold text-3xl md:text-4xl lg:text-5xl leading-tight mb-4">
-                    Get in<br />
+                    Get in
+                    <br />
                     <span className="text-white/40">Touch</span>
                 </h2>
                 <p className="text-white/50 max-w-2xl leading-relaxed">
-                    Have a project in mind? Fill out the form below and I'll get back to you within 24 hours.
+                    Have a project in mind? Fill out the form below and I'll get back to you within
+                    24 hours.
                 </p>
             </div>
 
@@ -48,9 +52,14 @@ export const ContactForm = () => {
 
                     <form onSubmit={handleSubmit} className="space-y-5">
                         <div>
-                            <label className="block text-sm text-white/40 mb-2 font-jetbrains-mono">Name</label>
+                            <label className="block text-sm text-white/40 mb-2 font-jetbrains-mono">
+                                Name
+                            </label>
                             <div className="relative">
-                                <FiUser className="absolute left-4 top-1/2 -translate-y-1/2 text-white/20" size={18} />
+                                <FiUser
+                                    className="absolute left-4 top-1/2 -translate-y-1/2 text-white/20"
+                                    size={18}
+                                />
                                 <input
                                     type="text"
                                     name="name"
@@ -64,9 +73,14 @@ export const ContactForm = () => {
                         </div>
 
                         <div>
-                            <label className="block text-sm text-white/40 mb-2 font-jetbrains-mono">Email</label>
+                            <label className="block text-sm text-white/40 mb-2 font-jetbrains-mono">
+                                Email
+                            </label>
                             <div className="relative">
-                                <FiMail className="absolute left-4 top-1/2 -translate-y-1/2 text-white/20" size={18} />
+                                <FiMail
+                                    className="absolute left-4 top-1/2 -translate-y-1/2 text-white/20"
+                                    size={18}
+                                />
                                 <input
                                     type="email"
                                     name="email"
@@ -80,7 +94,9 @@ export const ContactForm = () => {
                         </div>
 
                         <div>
-                            <label className="block text-sm text-white/40 mb-2 font-jetbrains-mono">Subject</label>
+                            <label className="block text-sm text-white/40 mb-2 font-jetbrains-mono">
+                                Subject
+                            </label>
                             <input
                                 type="text"
                                 name="subject"
@@ -93,9 +109,14 @@ export const ContactForm = () => {
                         </div>
 
                         <div>
-                            <label className="block text-sm text-white/40 mb-2 font-jetbrains-mono">Message</label>
+                            <label className="block text-sm text-white/40 mb-2 font-jetbrains-mono">
+                                Message
+                            </label>
                             <div className="relative">
-                                <FiMessageSquare className="absolute left-4 top-4 text-white/20" size={18} />
+                                <FiMessageSquare
+                                    className="absolute left-4 top-4 text-white/20"
+                                    size={18}
+                                />
                                 <textarea
                                     name="message"
                                     value={formData.message}
@@ -130,14 +151,21 @@ export const ContactForm = () => {
 
                 <div className="lg:col-span-2 space-y-6">
                     <div className="p-6 rounded-xl border border-white/5 bg-white/[0.02]">
-                        <h3 className="font-jetbrains-mono text-sm text-accent/60 uppercase tracking-wider mb-4">Contact Info</h3>
+                        <h3 className="font-jetbrains-mono text-sm text-accent/60 uppercase tracking-wider mb-4">
+                            Contact Info
+                        </h3>
                         <div className="space-y-4">
                             <div>
                                 <p className="text-sm text-white/40 mb-1">Email</p>
-                                <a href="mailto:info@devro-tech.com" className="text-sm text-white/70 hover:text-accent transition-colors">
+                                <a
+                                    href="mailto:info@devro-tech.com"
+                                    className="text-sm text-white/70 hover:text-accent transition-colors"
+                                >
                                     info@devro-tech.com
                                 </a>
-                                <p className="text-xs text-white/30 mt-0.5">Contact for development</p>
+                                <p className="text-xs text-white/30 mt-0.5">
+                                    Contact for development
+                                </p>
                             </div>
                             <div>
                                 <p className="text-sm text-white/40 mb-1">Location</p>
@@ -151,10 +179,25 @@ export const ContactForm = () => {
                     </div>
 
                     <div className="p-6 rounded-xl border border-white/5 bg-white/[0.02]">
-                        <h3 className="font-jetbrains-mono text-sm text-accent/60 uppercase tracking-wider mb-4">Services</h3>
+                        <h3 className="font-jetbrains-mono text-sm text-accent/60 uppercase tracking-wider mb-4">
+                            Services
+                        </h3>
                         <ul className="space-y-2">
-                            {['Web Development', 'Mobile Apps', 'API Development', 'WordPress', 'E-commerce', 'UI/UX Design'].map((s, i) => (
-                                <li key={i} className="flex items-center gap-2 text-sm text-white/50">
+                            {[
+                                'Web Development',
+                                'Mobile Apps',
+                                'API Development',
+                                'WordPress',
+                                'E-commerce',
+                                'UI/UX Design',
+                                'LMS',
+                                'POS System',
+                                'IT Management System',
+                            ].map((s, i) => (
+                                <li
+                                    key={i}
+                                    className="flex items-center gap-2 text-sm text-white/50"
+                                >
                                     <span className="w-1 h-1 rounded-full bg-accent/60" />
                                     {s}
                                 </li>
