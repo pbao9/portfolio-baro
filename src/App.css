@@ -13,8 +13,8 @@
     --color-canvas: #1a1a1a;
     --color-surface: #222222;
     --color-surface-lighter: #2a2a2a;
-    --color-bg-image: url('https://res.cloudinary.com/dqtxna4oa/image/upload/v1776831433/Logo_latw69.png');
-    --color-hero-image: url('https://res.cloudinary.com/dqtxna4oa/image/upload/v1776831256/avatar_gqkcfy.jpg');
+    --color-bg-image: url('https://res.cloudinary.com/dqtxna4oa/image/upload/f_webp,w_256/v1776831433/Logo_latw69.png');
+    --color-hero-image: url('https://res.cloudinary.com/dqtxna4oa/image/upload/f_webp,w_512/v1776831256/avatar_gqkcfy.jpg');
 
     --animate-pluse-expand: pulseExpand 2s infinite;
     --animate-shine: shine 5s linear infinite;

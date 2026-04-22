@@ -43,7 +43,7 @@ const Header = () => {
                 <nav className="max-w-6xl mx-auto px-6 md:px-10 lg:px-16 flex items-center justify-between h-16">
                     <Link to="/" className="flex items-center gap-3" onClick={handleNavClick}>
                         <img
-                            src="https://res.cloudinary.com/dqtxna4oa/image/upload/v1776831433/Logo_latw69.png"
+                            src="https://res.cloudinary.com/dqtxna4oa/image/upload/f_webp,w_64/v1776831433/Logo_latw69.png"
                             alt="Baro Pham"
                             className="w-8 h-8 rounded-full"
                         />
@@ -87,7 +87,7 @@ const Header = () => {
                     <div className="flex items-center justify-between px-6 h-16">
                         <Link to="/" className="flex items-center gap-3" onClick={handleNavClick}>
                             <img
-                                src="https://res.cloudinary.com/dqtxna4oa/image/upload/v1776831433/Logo_latw69.png"
+                                src="https://res.cloudinary.com/dqtxna4oa/image/upload/f_webp,w_64/v1776831433/Logo_latw69.png"
                                 alt="Baro Pham"
                                 className="w-8 h-8 rounded-full"
                             />

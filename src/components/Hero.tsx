@@ -51,7 +51,7 @@ const Hero = () => {
             <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-8">
                         <img
-                            src="https://res.cloudinary.com/dqtxna4oa/image/upload/v1776831256/avatar_gqkcfy.jpg"
+                            src="https://res.cloudinary.com/dqtxna4oa/image/upload/f_webp,w_256/v1776831256/avatar_gqkcfy.jpg"
                             alt="Baro Pham"
                             className="w-16 h-16 rounded-full object-cover"
                         />

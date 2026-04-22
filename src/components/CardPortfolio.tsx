@@ -8,7 +8,7 @@ import { Pulse } from './partials/Pulse.tsx';
 const CardPortfolio = () => {
     const [isImageLoaded, setIsImageLoaded] = useState(false);
     const firstContentImage =
-        'https://res.cloudinary.com/dqtxna4oa/image/upload/v1776831256/avatar_gqkcfy.jpg'
+        'https://res.cloudinary.com/dqtxna4oa/image/upload/f_webp,w_512/v1776831256/avatar_gqkcfy.jpg'
 
     const handleImageLoad = () => {
         setIsImageLoaded(true);
@@ -39,7 +39,7 @@ const CardPortfolio = () => {
                 secondContent={
                     <div>
                         <img
-                            src="https://res.cloudinary.com/dqtxna4oa/image/upload/v1750085951/Logo_jodsvn.jpg"
+                            src="https://res.cloudinary.com/dqtxna4oa/image/upload/f_webp,w_512/v1750085951/Logo_jodsvn.jpg"
                             alt="Devro Tech Logo"
                             className={`w-full h-full object-center object-cover ${
                                 isImageLoaded ? 'blur-0' : 'blur-2xl'
