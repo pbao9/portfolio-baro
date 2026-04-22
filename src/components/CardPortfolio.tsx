@@ -7,7 +7,8 @@ import { Pulse } from './partials/Pulse.tsx';
 
 const CardPortfolio = () => {
     const [isImageLoaded, setIsImageLoaded] = useState(false);
-    const firstContentImage = 'public/avatar.jpg';
+    const firstContentImage =
+        'https://res.cloudinary.com/dqtxna4oa/image/upload/v1776831256/avatar_gqkcfy.jpg'
 
     const handleImageLoad = () => {
         setIsImageLoaded(true);
