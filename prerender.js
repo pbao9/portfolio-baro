@@ -36,7 +36,7 @@ const metaTemplate = (title, description, url) => `
     <meta name="description" content="${description}">
     <meta property="og:title" content="${title}">
     <meta property="og:description" content="${description}">
-    <meta property="og:url" content="https://baro.devrotech.com${url}">
+    <meta property="og:url" content="https://baro-dev.io.vn${url}">
     <meta property="og:type" content="website">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="${title}">

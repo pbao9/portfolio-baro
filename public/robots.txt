@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://baro.devrotech.com/sitemap.xml
+Sitemap: https://baro-dev.io.vn/sitemap.xml
