@@ -1,37 +1,41 @@
 {
     "projects": [
         {
-            "id": -1,
-            "title": "AI Chatbot System",
-            "description": "Intelligent chatbot system with real-time communication capabilities. Built with NestJS backend and Next.js frontend, integrated with Ollama AI for natural language processing. Features real-time messaging, AI-powered responses, and seamless user experience.",
+            "id": 0,
+            "title": "Nexon7 Corporate Gifts Website",
+            "description": "Website ban qua tang doanh nghiep cho domain nexon7.vn (dang trien khai). Vai tro Fullstack, xay dung he thong voi Laravel GraphQL, frontend Next.js SSR, admin CMS Vue va database MySQL.",
             "thumbnail": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp",
-            "duration": "2025",
+            "duration": "Dang trien khai",
             "price": 0,
-            "tech_stack": [
-                "/nestjs.svg",
-                "/nextjs.svg",
-                "/gemini.svg",
-                "/typescript.svg"
-            ],
+            "tech_stack": ["/laravel.svg", "/graphql.svg", "/nextjs.svg", "/vue.svg", "/mysql.svg"],
             "images": [
                 "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp"
             ],
-            "link": "#",
+            "link": "https://nexon7.vn",
             "image_phone": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp"
         },
         {
-            "id": 0,
+            "id": 1,
+            "title": "Dermat.vn",
+            "description": "Website dermat.vn chuyen ban thuoc thoa lanh seo. Kien truc Wordpress Headless GraphQL ket hop frontend Astro.",
+            "thumbnail": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp",
+            "duration": "26/03/2026 - 02/04/2026",
+            "price": 0,
+            "tech_stack": ["/wordpress.svg", "/graphql.svg"],
+            "images": [
+                "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp"
+            ],
+            "link": "https://dermat.vn",
+            "image_phone": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp"
+        },
+        {
+            "id": 2,
             "title": "KFC Survey System",
             "description": "Comprehensive survey system for all KFC restaurant staff from North to South Vietnam. The system enables data collection and analysis, generates PDF reports comparing previous year and current year results. Built with Docker from A-Z, ensuring consistency and easy deployment.",
             "thumbnail": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp",
             "duration": "10/2025 - 11/2025",
             "price": 0,
-            "tech_stack": [
-                "/laravel.svg",
-                "/vue.svg",
-                "/docker.svg",
-                "/mysql.svg"
-            ],
+            "tech_stack": ["/laravel.svg", "/vue.svg", "/docker.svg", "/mysql.svg"],
             "images": [
                 "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp"
             ],
@@ -39,16 +43,27 @@
             "image_phone": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp"
         },
         {
-            "id": 1,
+            "id": 3,
+            "title": "AI Chatbot System",
+            "description": "Intelligent chatbot system with real-time communication capabilities. Built with NestJS backend and Next.js frontend, integrated with Ollama AI for natural language processing. Features real-time messaging, AI-powered responses, and seamless user experience.",
+            "thumbnail": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp",
+            "duration": "2025",
+            "price": 0,
+            "tech_stack": ["/nestjs.svg", "/nextjs.svg", "/gemini.svg", "/typescript.svg"],
+            "images": [
+                "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp"
+            ],
+            "link": "#",
+            "image_phone": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp"
+        },
+        {
+            "id": 4,
             "title": "Media Website",
             "description": "A full-featured e-commerce website with payment integration.",
             "thumbnail": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp",
             "duration": "1-3 days",
             "price": 500000,
-            "tech_stack": [
-                "/wordpress.svg",
-                "/php.svg"
-            ],
+            "tech_stack": ["/wordpress.svg", "/php.svg"],
             "images": [
                 "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742033121/screencapture-mediatemplate-local-2025-03-15-10_01_43_cqjogf.webp",
                 "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742125619/screencapture-mediatemplate-local-gioi-thieu-2025-03-15-10_34_45_m4guir.webp",
@@ -61,16 +76,13 @@
             "image_phone": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742124711/iPhone-13-PRO-mediatemplate.local_c0d2wa.png"
         },
         {
-            "id": 2,
+            "id": 5,
             "title": "Event Website",
             "description": "A full-featured e-commerce website with payment integration.",
             "thumbnail": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742042622/screencapture-localhost-sukienanphat-2025-03-15-19_26_22_epsztg.webp",
             "duration": "1-3 days",
             "price": 500000,
-            "tech_stack": [
-                "/wordpress.svg",
-                "/php.svg"
-            ],
+            "tech_stack": ["/wordpress.svg", "/php.svg"],
             "images": [
                 "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742042622/screencapture-localhost-sukienanphat-2025-03-15-19_26_22_epsztg.webp",
                 "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742042623/screencapture-localhost-sukienanphat-gioi-thieu-2025-03-15-19_26_52_rup2ge.webp",
@@ -80,16 +92,13 @@
             "image_phone": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742042622/screencapture-localhost-sukienanphat-category-to-chuc-su-kien-chuyen-nghiep-2025-03-15-19_28_32_dos83s.webp"
         },
         {
-            "id": 3,
+            "id": 6,
             "title": "Shoes Store",
             "description": "A full-featured e-commerce website with payment integration.",
             "thumbnail": "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742616216/screencapture-dashjk-vn-2025-03-22-10_57_41_ywzcbs.webp",
             "duration": "1-3 days",
             "price": 1500000,
-            "tech_stack": [
-                "/wordpress.svg",
-                "/php.svg"
-            ],
+            "tech_stack": ["/wordpress.svg", "/php.svg"],
             "images": [
                 "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742616216/screencapture-dashjk-vn-2025-03-22-10_57_41_ywzcbs.webp",
                 "https://res.cloudinary.com/dqtxna4oa/image/upload/v1742616216/screencapture-dashjk-vn-san-pham-2025-03-22-10_57_59_caly41.webp",

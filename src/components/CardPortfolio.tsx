@@ -1,16 +1,17 @@
-import { Link } from 'react-router'
-import { FaGithub, FaLinkedin, FaGitlab } from 'react-icons/fa6'
-import { MdOutlineAlternateEmail } from 'react-icons/md'
-import PixelTransition from '../blocks/Animations/PixelTransition/PixelTransition.tsx'
-import { Pulse } from './partials/Pulse.tsx'
-import { useState } from 'react'
+import { useState } from 'react';
+import { FaGithub, FaGitlab, FaLinkedin } from 'react-icons/fa6';
+import { MdOutlineAlternateEmail } from 'react-icons/md';
+import { Link } from 'react-router';
+import PixelTransition from '../blocks/Animations/PixelTransition/PixelTransition.tsx';
+import { Pulse } from './partials/Pulse.tsx';
 
 const CardPortfolio = () => {
-    const [isImageLoaded, setIsImageLoaded] = useState(false)
+    const [isImageLoaded, setIsImageLoaded] = useState(false);
+    const firstContentImage = 'public/avatar.jpg';
 
     const handleImageLoad = () => {
-        setIsImageLoaded(true)
-    }
+        setIsImageLoaded(true);
+    };
 
     return (
         <div
@@ -20,7 +21,7 @@ const CardPortfolio = () => {
             <PixelTransition
                 firstContent={
                     <img
-                        src="https://res.cloudinary.com/dqtxna4oa/image/upload/v1772595940/IMG_8796_Copy_wdkqxk.jpg"
+                        src={firstContentImage}
                         alt="Avatar"
                         className={`w-full h-full object-cover ${
                             isImageLoaded ? 'blur-0' : 'blur-2xl'
@@ -29,8 +30,6 @@ const CardPortfolio = () => {
                         style={{
                             width: '100%',
                             height: '100%',
-                            objectPosition: '0% 0%',
-                            scale: '1.5',
                             objectFit: 'cover',
                             transition: 'filter 0.3s ease-out',
                         }}
@@ -41,7 +40,7 @@ const CardPortfolio = () => {
                         <img
                             src="https://res.cloudinary.com/dqtxna4oa/image/upload/v1750085951/Logo_jodsvn.jpg"
                             alt="Avatar"
-                            className={`w-full h-full object-cover ${
+                            className={`w-full h-full object-center object-cover ${
                                 isImageLoaded ? 'blur-0' : 'blur-2xl'
                             }`}
                             onLoad={handleImageLoad}
@@ -128,6 +127,6 @@ const CardPortfolio = () => {
             /> */}
         </div>
     );
-}
+};
 
-export default CardPortfolio
+export default CardPortfolio;
