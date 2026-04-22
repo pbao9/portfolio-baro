@@ -118,7 +118,7 @@ const Hero = () => {
                             <span className="text-accent text-xl font-light">+</span>
                             <CountUp
                                 from={0}
-                                to={5}
+                                to={20}
                                 separator=","
                                 direction="up"
                                 duration={1.5}
